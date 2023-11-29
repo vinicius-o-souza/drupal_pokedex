@@ -1,0 +1,36 @@
+.site-header .navbar {
+  box-shadow: 4px 4px 24px 0px rgba(1, 17, 38, 0.2);
+}
+.site-header .navbar .navbar-toggler {
+  border: none;
+  padding: 0;
+}
+.site-header .navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.site-header .navbar .navbar-toggler.collapsed .bi-list {
+  display: block;
+}
+.site-header .navbar .navbar-toggler.collapsed .bi-x-lg {
+  display: none;
+}
+.site-header .navbar .navbar-toggler .bi {
+  color: #000000;
+  font-size: 1.875rem;
+}
+.site-header .navbar .navbar-toggler .bi-list {
+  display: none;
+}
+.site-header .navbar .navbar-toggler .bi-x-lg {
+  display: block;
+}
+@media (min-width: 768px) {
+  .site-header .navbar .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 767.98px) {
+  .site-header .navbar .navbar-collapse {
+    margin-top: 1.5rem;
+  }
+}

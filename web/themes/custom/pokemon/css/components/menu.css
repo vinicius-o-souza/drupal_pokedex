@@ -1,0 +1,11 @@
+ul.menu {
+  margin-left: 0;
+}
+
+.navigation .nav .nav-item .nav-link {
+  color: #212121;
+}
+.navigation .nav .nav-item .nav-link:hover, .navigation .nav .nav-item .nav-link.is-active {
+  border-bottom: 2px solid #212121;
+  text-decoration: none;
+}

@@ -1,0 +1,29 @@
+uuid: 973861dd-bb51-411f-8a0c-1899aaaf5bab
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - pokemon
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: pokemon_page_title
+theme: pokemon
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

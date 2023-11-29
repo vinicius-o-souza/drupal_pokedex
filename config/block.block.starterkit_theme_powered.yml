@@ -1,0 +1,22 @@
+uuid: b066a261-22c6-43ce-87f8-d75dd5138073
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - starterkit_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: starterkit_theme_powered
+theme: starterkit_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

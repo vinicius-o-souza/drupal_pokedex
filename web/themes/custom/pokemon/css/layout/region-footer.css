@@ -1,0 +1,19 @@
+.region-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .region-footer {
+    grid-template-columns: 1fr 1fr;
+    justify-items: baseline;
+  }
+}
+.region-footer .block {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .region-footer .block:nth-child(even) {
+    justify-self: end;
+  }
+}

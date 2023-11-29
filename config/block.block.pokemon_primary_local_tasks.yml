@@ -1,0 +1,22 @@
+uuid: 6b9b8f9a-a8bf-4d2d-9679-443bbcefb575
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pokemon
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: pokemon_primary_local_tasks
+theme: pokemon
+region: featured
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

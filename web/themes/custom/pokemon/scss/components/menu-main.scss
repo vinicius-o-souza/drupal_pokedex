@@ -1,0 +1,22 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+.navigation {
+  &.menu--main {
+    .nav {
+      margin-left: 0;
+      justify-content: center;
+      .nav-item {
+        .nav-link {
+          font-size: pxToRem(27);
+          @include media-breakpoint-up(md) {
+            font-size: pxToRem(19);
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: pxToRem(25);
+          }
+        }
+      }
+    }
+  }
+}

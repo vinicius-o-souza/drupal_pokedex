@@ -1,0 +1,17 @@
+.navigation.menu--main .nav {
+  margin-left: 0;
+  justify-content: center;
+}
+.navigation.menu--main .nav .nav-item .nav-link {
+  font-size: 1.6875rem;
+}
+@media (min-width: 768px) {
+  .navigation.menu--main .nav .nav-item .nav-link {
+    font-size: 1.1875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation.menu--main .nav .nav-item .nav-link {
+    font-size: 1.5625rem;
+  }
+}

@@ -1,0 +1,32 @@
+uuid: c7f47899-289f-4bd2-b905-b3333f727002
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - comment
+    - contact
+    - file
+    - filter
+    - google_analytics
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'delete own files'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view media'

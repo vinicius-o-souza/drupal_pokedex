@@ -1,0 +1,48 @@
+# Main theme library.
+global:
+  js:
+    js/pokemon.js: {}
+  css:
+    base:
+      css/base/elements.css: {}
+      css/base/normalize.css: {}
+      css/base/typography.css: {}
+    component:
+      css/components/buttons.css: {}
+      css/components/block.css: {}
+      css/components/breadcrumb.css: {}
+      css/components/field.css: {}
+      css/components/footer.css: {}
+      css/components/form.css: {}
+      css/components/header.css: {}
+      css/components/language.css: {}
+      css/components/menu.css: {}
+      css/components/menu-main.css: {}
+      css/components/messages.css: {}
+      css/components/node.css: {}
+      css/components/sidebar.css: {}
+      css/components/table.css: {}
+      css/components/tabs.css: {}
+    layout:
+      css/layout/layout.css: {}
+      css/layout/region-footer.css: {}
+      css/layout/region-header.css: {}
+    theme:
+      css/theme/print.css: { media: print }
+
+bootstrap:
+  js:
+    js/bootstrap/bootstrap.min.js: {}
+  css:
+    base:
+      css/base/bootstrap.css: {}
+
+bootstrap_icons:
+  css:
+    base:
+      https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css: {}
+
+hero_banner:
+  css:
+    component:
+      css/components/blocks/hero-banner.css: {}

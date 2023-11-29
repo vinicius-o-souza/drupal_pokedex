@@ -1,0 +1,10 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+a {
+  color: $info;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

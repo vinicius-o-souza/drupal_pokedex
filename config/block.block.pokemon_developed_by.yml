@@ -1,0 +1,25 @@
+uuid: bf1e20b7-1861-4711-9d97-8401dd5c830c
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d74b1bbb-a651-4527-b964-0d4aee3db4ae'
+  module:
+    - block_content
+  theme:
+    - pokemon
+id: pokemon_developed_by
+theme: pokemon
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:d74b1bbb-a651-4527-b964-0d4aee3db4ae'
+settings:
+  id: 'block_content:d74b1bbb-a651-4527-b964-0d4aee3db4ae'
+  label: 'Developed by'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

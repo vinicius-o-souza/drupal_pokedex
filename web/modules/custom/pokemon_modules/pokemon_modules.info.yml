@@ -1,0 +1,8 @@
+name: 'Pokemon Modules'
+type: module
+description: 'Provide additional functionality for the Pokemon Theme'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:layout_discovery
+  - drupal:sdc

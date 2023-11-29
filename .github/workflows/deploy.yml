@@ -1,0 +1,36 @@
+name: Deploy
+
+# Trigger deployment only on push to main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - id: validate
+        name: Composer Validate
+        uses: php-actions/composer@master
+        with:
+          command: validate
+
+      - id: deploy
+        name: Deploy
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
+          EXCLUDE: "/vendor/"
+          SCRIPT_AFTER: |
+            cd /var/www/html
+            composer install
+            ./vendor/bin/drush cim -y
+            ./vendor/bin/drush cr

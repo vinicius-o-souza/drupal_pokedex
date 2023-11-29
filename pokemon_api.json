@@ -1,0 +1,21 @@
+// https://pokeapi.co/api/v2/pokemon/1
+{
+  "number": "id",
+  "name": "name", // Uppercase
+  "types": "types", // Array
+  "moves": "moves", // Array
+  "experience": "base_experience", // Integer
+  "abilities": "abilities", // Array 
+  "height": "height", // Integer
+  "weight": "weight", // Integer
+  "stats": "stats" // Array
+}
+
+// https://pokeapi.co/api/v2/pokemon-species/1
+{
+  "description": "flavor-text-entries", // Array
+  "variations": "", // Not for now.
+  "evolves": "evolves_from_species", // Array
+  "is_legendary": "is_legendary", // Boolean
+  "is_mythical": "is_mythical", // Boolean
+}

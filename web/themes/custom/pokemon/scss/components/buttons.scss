@@ -1,0 +1,19 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+a {
+  &.btn {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.btn {
+  border-radius: 11px;
+  box-shadow: 0px -9px 0px 0px rgba(0, 0, 0, 0.18) inset;
+  color: $dark;
+  font-size: pxToRem(24);
+  padding: pxToRem(12) pxToRem(32) pxToRem(16);
+  width: 100%;
+}

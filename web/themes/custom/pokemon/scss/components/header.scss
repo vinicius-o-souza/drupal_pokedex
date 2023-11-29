@@ -1,0 +1,41 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+.site-header {
+  .navbar {
+    box-shadow: 4px 4px 24px 0px rgba(1, 17, 38, 0.20);
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+      &:focus {
+        box-shadow: none;
+      }
+      &.collapsed {
+        .bi-list {
+          display: block;
+        }
+        .bi-x-lg {
+          display: none; 
+        }
+      }
+      .bi {
+        color: $black;
+        font-size: pxToRem(30);
+      }
+      .bi-list {
+        display: none;
+      }
+      .bi-x-lg {
+        display: block;
+      }
+    }
+    .navbar-collapse {
+      @include media-breakpoint-up(md) {
+        justify-content: flex-end;
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: pxToRem(24);
+      }
+    }
+  }
+}

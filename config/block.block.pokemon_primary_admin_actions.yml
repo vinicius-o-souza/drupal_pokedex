@@ -1,0 +1,20 @@
+uuid: a31d3b99-6ad4-48bd-a4f9-5c86cec6bad3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pokemon
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: pokemon_primary_admin_actions
+theme: pokemon
+region: featured
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 108e4da3-5545-48de-8fe9-52439e6558f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - pokemon
+id: pokemon_footer_menu
+theme: pokemon
+region: footer
+weight: -7
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

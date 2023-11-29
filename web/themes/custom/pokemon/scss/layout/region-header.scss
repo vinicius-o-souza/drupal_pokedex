@@ -1,0 +1,14 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+.region-header {
+  .site-logo {
+    display: block;
+    img {
+      height: pxToRem(30);
+      @include media-breakpoint-up(md) {
+        height: pxToRem(45);
+      }
+    }
+  }
+}

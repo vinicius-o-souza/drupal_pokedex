@@ -1,0 +1,73 @@
+.block--hero-banner {
+  margin: 4rem 0;
+}
+@media (min-width: 992px) {
+  .block--hero-banner {
+    margin: 8rem 0;
+    position: relative;
+  }
+}
+.block--hero-banner .hero-banner--image {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .block--hero-banner .hero-banner--image {
+    position: absolute;
+    right: -3.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .block--hero-banner .hero-banner--image {
+    right: 0;
+  }
+}
+.block--hero-banner .hero-banner--image img {
+  height: 100%;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .block--hero-banner .hero-banner--image img {
+    width: 43.75rem;
+    max-width: 43.75rem;
+  }
+}
+.block--hero-banner .hero-banner--description {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .block--hero-banner .hero-banner--description {
+    max-width: 31.25rem;
+    position: relative;
+    text-align: left;
+  }
+}
+.block--hero-banner .hero-banner--description .field--name-field-heading .field__item * {
+  font-size: 2.625rem;
+  letter-spacing: 4px;
+}
+@media (min-width: 768px) {
+  .block--hero-banner .hero-banner--description .field--name-field-heading .field__item * {
+    font-size: 4.5rem;
+  }
+}
+.block--hero-banner .hero-banner--description .field--name-body {
+  margin-bottom: 2.625rem;
+}
+.block--hero-banner .hero-banner--description .field--name-body .field__item * {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: normal;
+}
+@media (min-width: 992px) {
+  .block--hero-banner .hero-banner--description .field--name-body .field__item * {
+    font-size: 2rem;
+  }
+}
+.block--hero-banner .hero-banner--description .field--name-field-cta .btn {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .block--hero-banner .hero-banner--description .field--name-field-cta .btn {
+    width: auto;
+  }
+}
