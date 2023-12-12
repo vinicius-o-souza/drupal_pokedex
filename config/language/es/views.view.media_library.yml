@@ -1,23 +1,46 @@
 label: 'Biblioteca de medios'
+description: 'Buscar y administrar medios.'
 display:
   default:
     display_title: 'Por defecto'
     display_options:
+      title: Multimedia
       fields:
         media_bulk_form:
           action_title: Acción
       pager:
         options:
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page_label: 'Elementos por página'
             items_per_page_options_all_label: '- Todo -'
             offset_label: Desplazamiento
       exposed_form:
         options:
+          submit_button: 'Aplicar filtros'
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'No hay medios disponibles.'
+      sorts:
+        created:
+          expose:
+            label: 'Más recientes primero'
+        name:
+          expose:
+            label: 'Nombre (A-Z)'
+        name_1:
+          expose:
+            label: 'Nombre (Z-A)'
       filters:
         status:
+          expose:
+            label: 'Estado de publicación'
           group_info:
             label: Publicado
             group_items:
@@ -28,6 +51,11 @@ display:
         name:
           expose:
             label: Nombre
+        bundle:
+          expose:
+            label: 'Tipos multimedia'
+          group_info:
+            label: 'Tipos multimedia'
         langcode:
           expose:
             label: Idioma
@@ -37,11 +65,20 @@ display:
       fields:
         media_bulk_form:
           action_title: Acción
+        name:
+          separator: ', '
         edit_media:
+          alter:
+            text: 'Editar {{ nombre }}'
+            alt: 'Editar {{ nombre }}'
           text: Editar
         delete_media:
+          alter:
+            text: 'Borrar {{ nombre }}'
+            alt: 'Borrar {{ nombre }}'
           text: Eliminar
   widget:
+    display_title: Control
     display_options:
       arguments:
         bundle:
@@ -51,9 +88,17 @@ display:
         name:
           expose:
             label: Nombre
+      header:
+        display_link_grid:
+          label: Cuadrícula
+        display_link_table:
+          label: Tabla
   widget_table:
+    display_title: 'Widget (tabla)'
     display_options:
       fields:
+        thumbnail__target_id:
+          label: Miniatura
         name:
           label: Nombre
         uid:
@@ -68,3 +113,8 @@ display:
         name:
           expose:
             label: Nombre
+      header:
+        display_link_grid:
+          label: Cuadrícula
+        display_link_table:
+          label: Tabla

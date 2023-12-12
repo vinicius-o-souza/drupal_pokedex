@@ -10,6 +10,7 @@ display:
           label: Título
         type:
           label: 'Tipo de conteúdo'
+          separator: ', '
         name:
           label: Autor
         status:

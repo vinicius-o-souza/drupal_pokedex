@@ -1,9 +1,9 @@
-uuid: bf1e20b7-1861-4711-9d97-8401dd5c830c
-langcode: pt-br
+uuid: 299f2ae5-95be-4115-824c-c4aec8d33f17
+langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:d74b1bbb-a651-4527-b964-0d4aee3db4ae'
+    - 'block_content:basic:21e06109-d1e1-4e8a-86f9-cfb3e9ab1401'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: pokemon_developed_by
 theme: pokemon
 region: footer
-weight: -6
+weight: -5
 provider: null
-plugin: 'block_content:d74b1bbb-a651-4527-b964-0d4aee3db4ae'
+plugin: 'block_content:21e06109-d1e1-4e8a-86f9-cfb3e9ab1401'
 settings:
-  id: 'block_content:d74b1bbb-a651-4527-b964-0d4aee3db4ae'
+  id: 'block_content:21e06109-d1e1-4e8a-86f9-cfb3e9ab1401'
   label: 'Developed by'
   label_display: '0'
   provider: block_content

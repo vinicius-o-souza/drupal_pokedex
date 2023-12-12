@@ -2,7 +2,31 @@ settings:
   plugins:
     ckeditor5_codeBlock:
       languages:
-        0:
+        -
           label: 'Texto puro'
-        5:
+        -
+          label: C
+        -
+          label: 'C#'
+        -
+          label: C++
+        -
+          label: CSS
+        -
           label: Alterações
+        -
+          label: HTML
+        -
+          label: Java
+        -
+          label: JavaScript
+        -
+          label: PHP
+        -
+          label: Python
+        -
+          label: Ruby
+        -
+          label: TypeScript
+        -
+          label: XML

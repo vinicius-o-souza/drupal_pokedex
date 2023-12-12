@@ -1,21 +1,34 @@
+label: Multimedia
+description: 'Buscar y administrar medios.'
 display:
   default:
     display_title: 'Por defecto'
     display_options:
+      title: Multimedia
       fields:
         media_bulk_form:
           action_title: Acción
+        thumbnail__target_id:
+          label: Miniatura
+          separator: ', '
+        name:
+          label: 'Nombre del elemento multimedia'
+          separator: ', '
         bundle:
           label: Tipo
+          separator: ', '
         uid:
           label: Autor
+          separator: ', '
         status:
           label: Estado
           settings:
             format_custom_false: 'Sin publicar'
             format_custom_true: Publicado
+          separator: ', '
         changed:
           label: Actualizado
+          separator: ', '
         operations:
           label: Operaciones
       pager:
@@ -34,11 +47,21 @@ display:
           submit_button: Filtro
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'No hay medios disponibles.'
       filters:
+        name:
+          expose:
+            label: 'Nombre del elemento multimedia'
         bundle:
           expose:
             label: Tipo
         status:
+          expose:
+            label: Verdad
           group_info:
             label: 'Estado de publicación'
             group_items:
@@ -49,3 +72,8 @@ display:
         langcode:
           expose:
             label: Idioma
+  media_page_list:
+    display_title: Multimedia
+    display_options:
+      menu:
+        title: Multimedia
