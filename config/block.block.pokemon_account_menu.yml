@@ -13,7 +13,7 @@ _core:
 id: pokemon_account_menu
 theme: pokemon
 region: footer
-weight: -8
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:

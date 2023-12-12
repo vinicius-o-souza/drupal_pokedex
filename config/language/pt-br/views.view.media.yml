@@ -1,21 +1,34 @@
+label: Mídia
+description: 'Encontrar e gerenciar mídia.'
 display:
   default:
     display_title: Padrão
     display_options:
+      title: Mídia
       fields:
         media_bulk_form:
           action_title: Ação
+        thumbnail__target_id:
+          label: Miniatura
+          separator: ', '
+        name:
+          label: 'Nome da mídia'
+          separator: ', '
         bundle:
           label: Tipo
+          separator: ', '
         uid:
           label: Autor
+          separator: ', '
         status:
           label: Status
           settings:
             format_custom_false: 'Não publicado'
             format_custom_true: Publicado
+          separator: ', '
         changed:
           label: Atualizado
+          separator: ', '
         operations:
           label: Operações
       pager:
@@ -36,11 +49,19 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+      empty:
+        area_text_custom:
+          content: 'Nenhuma mídia disponível.'
       filters:
+        name:
+          expose:
+            label: 'Nome da mídia'
         bundle:
           expose:
             label: Tipo
         status:
+          expose:
+            label: Verdadeiro
           group_info:
             label: Status
             group_items:
@@ -51,3 +72,8 @@ display:
         langcode:
           expose:
             label: Idioma
+  media_page_list:
+    display_title: Mídia
+    display_options:
+      menu:
+        title: Mídia
