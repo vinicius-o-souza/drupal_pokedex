@@ -50,6 +50,8 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pokemon_api: 0
+  pokemon_api_sync: 0
   pokemon_modules: 0
   sdc: 0
   serialization: 0
