@@ -26,15 +26,17 @@ display:
     display_options:
       fields: {  }
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 12
           total_pages: 0
           id: 0
           tags:
             next: ››
             previous: ‹‹
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -43,6 +45,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -62,6 +65,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        field_pokemon_order_value:
+          id: field_pokemon_order_value
+          table: node__field_pokemon_order
+          field: field_pokemon_order_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         sticky:
           id: sticky
           table: taxonomy_index
@@ -215,8 +231,7 @@ display:
       style:
         type: default
         options:
-          grouping: {  }
-          row_class: ''
+          row_class: 'col-12 col-md-6 col-lg-3 mb-1'
           default_row_class: true
           uses_fields: false
       row:
@@ -306,6 +321,22 @@ display:
       query:
         type: views_query
         options: {  }
+      defaults:
+        header: false
+      header:
+        entity_taxonomy_term:
+          id: entity_taxonomy_term
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: true
+          target: '{{ raw_arguments.tid }}'
+          view_mode: full
+          tokenize: true
+          bypass_access: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:
