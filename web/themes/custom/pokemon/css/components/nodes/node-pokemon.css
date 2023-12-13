@@ -1,0 +1,28 @@
+.node--type-pokemon.node--view-mode-teaser a {
+  background: #F2F2F2;
+  border-radius: 12px;
+  display: block;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+.node--type-pokemon.node--view-mode-teaser a:hover {
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  text-decoration: none;
+}
+.node--type-pokemon.node--view-mode-teaser a .pokemon--image {
+  max-width: 100%;
+  max-height: 12.5rem;
+}
+.node--type-pokemon.node--view-mode-teaser a .node__title {
+  color: #000000;
+  font-size: 1.125rem;
+  text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+}
+.node--type-pokemon.node--view-mode-teaser a .field--name-field-pokeapi-id {
+  color: #4B4B4B;
+  font-size: 12px;
+}
+.node--type-pokemon.node--view-mode-teaser a .field--name-field-pokemon-types .field__item {
+  display: inline-block;
+  margin: 0 0.25rem;
+}

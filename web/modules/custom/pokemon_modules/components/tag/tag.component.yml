@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Call to Action
+description: Call to action link.
+props:
+  type: object
+  required:
+    - text
+    - href
+  properties:
+    text:
+      type: string
+      title: Text
+      description: The text for the TAG
+      examples:
+        - Grass
+        - Fire
+        - Water
+        - Normal
+        - Flying
+        - Poison
+    class:
+      type: string
+      title: Class
+      description: The class for the TAG
+      examples:
+        - grass
+        - fire
+        - water
+        - normal
+        - flying
+        - poison

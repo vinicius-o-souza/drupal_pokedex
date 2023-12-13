@@ -1,0 +1,12 @@
+.view .view-header h1 {
+  font-size: 2.625rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .view .view-header h1 {
+    font-size: 3.5rem;
+  }
+}

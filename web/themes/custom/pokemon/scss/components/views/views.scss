@@ -1,0 +1,17 @@
+@import "../../mixins/mixins";
+@import "../../variables/variables";
+
+.view {
+  .view-header {
+    h1 {
+      font-size: pxToRem(42);
+      font-weight: 400;
+      letter-spacing: 3px;
+      margin-bottom: pxToRem(56);
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        font-size: pxToRem(56);
+      }
+    }
+  }  
+}
