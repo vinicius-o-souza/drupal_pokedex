@@ -52,6 +52,13 @@ node_pokemon:
     component:
       css/components/nodes/node-pokemon.css: {}
 
+radio:
+  css:
+    component:
+      css/components/fields/radio.css: {}
+  js:
+    js/radio.js: {}
+
 views:
   css:
     component:

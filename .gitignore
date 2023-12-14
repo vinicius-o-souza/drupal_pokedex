@@ -70,3 +70,6 @@
 
 # Private keys
 *.pem
+
+# Libraries
+/web/libraries/

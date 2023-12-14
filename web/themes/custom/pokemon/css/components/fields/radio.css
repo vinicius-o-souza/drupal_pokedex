@@ -1,0 +1,17 @@
+.form-radios {
+  background-color: #F2F2F2;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 100%;
+}
+.form-radios input {
+  display: none;
+}
+.form-radios .bi {
+  position: absolute;
+}
+.form-radios label {
+  padding-left: 3rem;
+  position: relative;
+}
