@@ -14,8 +14,9 @@
         text-decoration: none;
       }
       .pokemon--image {
-        max-width: 100%;
+        margin-bottom: pxToRem(16);
         max-height: pxToRem(200);
+        max-width: 100%;
       }
       .node__title {
         color: $black;

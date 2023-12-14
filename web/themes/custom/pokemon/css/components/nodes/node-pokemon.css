@@ -10,8 +10,9 @@
   text-decoration: none;
 }
 .node--type-pokemon.node--view-mode-teaser a .pokemon--image {
-  max-width: 100%;
+  margin-bottom: 1rem;
   max-height: 12.5rem;
+  max-width: 100%;
 }
 .node--type-pokemon.node--view-mode-teaser a .node__title {
   color: #000000;

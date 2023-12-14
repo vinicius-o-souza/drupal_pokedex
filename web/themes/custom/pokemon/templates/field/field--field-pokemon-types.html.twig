@@ -41,9 +41,11 @@
 
 {% block content %}
 
+  {% set class = item.content['#entity'].getUntranslated().getName() %}
+
   {% include 'pokemon_modules:tag' with {
     text: item.content|render,
-    class: item.content|render|striptags|trim|lower
+    class: class|lower
   } %}
 
 {% endblock %}
