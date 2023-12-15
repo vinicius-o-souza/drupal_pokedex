@@ -99,7 +99,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -110,10 +110,10 @@ display:
           text_input_required_format: basic_html
           bef:
             general:
-              autosubmit: true
+              autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
-              autosubmit_hide: true
+              autosubmit_hide: false
               input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
@@ -144,7 +144,18 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<h4 class="text-center mt-2">Sorry, we didn''t find any Pokemon</h4>'
+          tokenize: false
       sorts:
         field_pokemon_order_value:
           id: field_pokemon_order_value
@@ -311,7 +322,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text
-          empty: false
+          empty: true
           content:
             value: '<h1>List of all <strong>Pokemons</strong> for you to choose your favorite!</h1>'
             format: full_html

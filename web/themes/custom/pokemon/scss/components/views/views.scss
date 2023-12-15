@@ -15,18 +15,6 @@
       }
     }
   }
-  .view-empty {
-    h {
-      font-size: pxToRem(42);
-      font-weight: 200;
-      letter-spacing: 3px;
-      margin-bottom: pxToRem(56);
-      text-align: center;
-      @include media-breakpoint-up(md) {
-        font-size: pxToRem(56);
-      }
-    }
-  }
 }
 
 .view-pokemons {
