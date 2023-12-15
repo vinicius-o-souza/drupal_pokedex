@@ -46,3 +46,20 @@ hero_banner:
   css:
     component:
       css/components/blocks/hero-banner.css: {}
+
+node_pokemon:
+  css:
+    component:
+      css/components/nodes/node-pokemon.css: {}
+
+radio:
+  css:
+    component:
+      css/components/fields/radio.css: {}
+  js:
+    js/radio.js: {}
+
+views:
+  css:
+    component:
+      css/components/views/views.css: {}

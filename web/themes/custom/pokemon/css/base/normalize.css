@@ -2,3 +2,24 @@ body {
   font-size: 16px;
   font-family: "Karla", sans-serif;
 }
+
+:root {
+  --pokemon-bug: #A7B723;
+  --pokemon-dark: #75574C;
+  --pokemon-dragon: #7037FF;
+  --pokemon-electric: #F9CF30;
+  --pokemon-fairy: #E69EAC;
+  --pokemon-fighting: #C12239;
+  --pokemon-fire: #F57D31;
+  --pokemon-flying: #A891EC;
+  --pokemon-ghost: #70559B;
+  --pokemon-grass: #74CB48;
+  --pokemon-ground: #DEC16B;
+  --pokemon-ice: #9AD6DF;
+  --pokemon-normal: #AAA67F;
+  --pokemon-poison: #A43E9E;
+  --pokemon-psychic: #FB5584;
+  --pokemon-rock: #B69E31;
+  --pokemon-steel: #B7B9D0;
+  --pokemon-water: #6493EB;
+}

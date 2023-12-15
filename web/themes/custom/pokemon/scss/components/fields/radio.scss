@@ -1,0 +1,20 @@
+@import "../../mixins/mixins";
+@import "../../variables/variables";
+
+.form-radios {
+  background-color: $light;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.20);
+  border-radius: pxToRem(12);
+  padding: pxToRem(16);
+  width: 100%;
+  input {
+    display: none;
+  }
+  .bi {
+    position: absolute;
+  }
+  label {
+    padding-left: pxToRem(48);
+    position: relative;
+  }
+}

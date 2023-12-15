@@ -24,3 +24,6 @@ autoban_dblog_type_exclude: |-
   system
   user
 autoban_threshold_analyze: '5'
+autoban_threshold_last: '5'
+autoban_window_last: '1 month ago'
+autoban_provider_last: ban

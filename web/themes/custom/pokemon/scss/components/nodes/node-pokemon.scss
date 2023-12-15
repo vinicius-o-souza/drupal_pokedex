@@ -1,0 +1,40 @@
+@import "../../mixins/mixins";
+@import "../../variables/variables";
+
+.node--type-pokemon {
+  &.node--view-mode-teaser {
+    a {
+      background: $light;
+      border-radius: 12px;
+      display: block;
+      padding-bottom: pxToRem(24);
+      text-align: center;
+      &:hover {
+        box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.20);
+        text-decoration: none;
+      }
+      .pokemon--image {
+        margin-bottom: pxToRem(16);
+        max-height: pxToRem(200);
+        max-width: 100%;
+      }
+      .node__title {
+        color: $black;
+        font-size: pxToRem(18);
+        text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.10);
+      }
+      .field--name {
+        &-field-pokeapi-id {
+          color: $gray;
+          font-size: 12px;
+        }
+        &-field-pokemon-types {
+          .field__item {
+            display: inline-block;
+            margin: 0 pxToRem(4);
+          }
+        }
+      }
+    }
+  }
+}

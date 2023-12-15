@@ -1,0 +1,10 @@
+uuid: 5e074ba6-9777-4177-b537-51548e398409
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: syM6piyyxENWRmv0dNwor4UMxW-Ip45O2imT_GGR5cI
+name: 'Pokemon Type'
+vid: pokemon_type
+description: 'List of available pokemons'
+weight: 0

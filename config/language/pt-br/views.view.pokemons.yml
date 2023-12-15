@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            first: '« Primeiro'
+            last: 'Último »'
+      header:
+        area:
+          content:
+            value: '<h1>Lista de todos os <strong>Pokémons</strong> para você escolher o seu favorito!</h1>'
+            format: full_html
+      filters:
+        title:
+          expose:
+            placeholder: 'Encontre seu pokemon...'
+        field_pokemon_types_target_id:
+          expose:
+            label: Tipos
+            description: 'Selecione o tipo do Pokemon'
+          group_info:
+            label: Tipos
