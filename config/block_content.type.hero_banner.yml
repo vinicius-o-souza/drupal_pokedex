@@ -1,0 +1,8 @@
+uuid: 21540299-98f5-4a98-b2f4-edd2fd6036b9
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner
+label: 'Hero Banner'
+revision: 0
+description: 'A block with image, heading, copy and cta.'

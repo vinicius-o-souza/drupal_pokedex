@@ -1,0 +1,68 @@
+@import "../../mixins/mixins";
+@import "../../variables/variables";
+
+.block--hero-banner {
+  margin: pxToRem(64) 0;
+  @include media-breakpoint-up(lg) {
+    margin: pxToRem(128) 0;
+    position: relative;
+  }
+  .hero-banner--image {
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: pxToRem(-50);
+    }
+    @include media-breakpoint-up(xl) {
+      right: 0;
+    }
+    img {
+      height: 100%;
+      max-width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: pxToRem(700);
+        max-width: pxToRem(700);
+      }
+    }
+  }
+  .hero-banner--description {
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      max-width: pxToRem(500);
+      position: relative;
+      text-align: left;
+    }
+    .field--name-field-heading {
+      .field__item {
+        * {
+          font-size: pxToRem(42);
+          letter-spacing: 4px;
+          @include media-breakpoint-up(md) {
+            font-size: pxToRem(72);
+          }
+        }
+      }
+    }
+    .field--name-body {
+      margin-bottom: pxToRem(42);
+      .field__item {
+        * {
+          font-size: pxToRem(24);
+          font-weight: 300;
+          line-height: normal;
+          @include media-breakpoint-up(lg) {
+            font-size: pxToRem(32);
+          }
+        }
+      }
+    }
+    .field--name-field-cta {
+      .btn {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: auto;
+        }
+      }
+    }
+  }
+}

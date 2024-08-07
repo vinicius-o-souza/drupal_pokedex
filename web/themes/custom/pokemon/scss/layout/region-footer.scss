@@ -1,0 +1,20 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+.region-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: baseline;
+  }
+  .block {
+    padding: pxToRem(8) 0;
+    text-align: center;
+    &:nth-child(even) {
+      @include media-breakpoint-up(md) {
+        justify-self: end;
+      }
+    }
+  }
+}

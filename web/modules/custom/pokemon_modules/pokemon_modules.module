@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Pokemon module.
+ */
+
+/**
+ * Implements hook_layout_alter().
+ */
+function pokemon_modules_layout_alter(&$definitions) {
+  unset($definitions['layout_onecol']);
+  unset($definitions['layout_twocol_section']);
+  unset($definitions['layout_threecol_section']);
+  unset($definitions['layout_fourcol_section']);
+}

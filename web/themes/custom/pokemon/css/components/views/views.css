@@ -1,0 +1,22 @@
+.view {
+  margin: 3.375rem 0;
+}
+.view .view-header h1 {
+  font-size: 2.625rem;
+  font-weight: 200;
+  letter-spacing: 3px;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .view .view-header h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.view-pokemons.view-display-id-page_1 .view-filters .form-type-textfield {
+  width: 100%;
+}
+.view-pokemons.view-display-id-page_1 .view-filters .form-type-textfield input {
+  padding: 1.5rem;
+}

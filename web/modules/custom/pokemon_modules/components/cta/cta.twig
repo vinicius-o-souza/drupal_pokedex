@@ -1,0 +1,10 @@
+{% set cta_attributes = create_attribute() %}
+{% set cta_attributes = cta_attributes.setAttribute('target', target) %}
+
+<a {{ cta_attributes.addClass('btn btn-success') }}
+  {% if href is not empty %}
+    href="{{ href }}"
+  {% endif %}
+>
+  {{ text }}
+</a>

@@ -1,0 +1,22 @@
+uuid: b68fd480-9d45-44df-bfea-9a173754b57e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pokemon
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: pokemon_help
+theme: pokemon
+region: featured
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

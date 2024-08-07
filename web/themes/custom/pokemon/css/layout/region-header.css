@@ -1,0 +1,11 @@
+.region-header .site-logo {
+  display: block;
+}
+.region-header .site-logo img {
+  height: 1.875rem;
+}
+@media (min-width: 768px) {
+  .region-header .site-logo img {
+    height: 2.8125rem;
+  }
+}

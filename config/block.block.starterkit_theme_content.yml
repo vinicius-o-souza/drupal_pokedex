@@ -1,0 +1,22 @@
+uuid: cbf8f44d-49b8-43f8-b68d-282129ce97a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - starterkit_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: starterkit_theme_content
+theme: starterkit_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

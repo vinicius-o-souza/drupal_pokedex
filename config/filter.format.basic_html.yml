@@ -1,21 +1,24 @@
-uuid: 36455997-1476-4181-bb07-08a9f3cac470
+uuid: 660af58d-dbec-478f-8a05-c7d2fb5a859a
 langcode: en
 status: true
 dependencies:
   module:
     - editor
 _core:
-  default_config_hash: mclCbTlJwWJORez4Y1eX2MqA0aGjSMAoJb3TaBABcK8
+  default_config_hash: mufoCrfOvOmGXWBLRwQblEQbGEKQz09rnTbXnuVGC9o
 name: 'Basic HTML'
 format: basic_html
 weight: 0
 filters:
-  editor_file_reference:
-    id: editor_file_reference
-    provider: editor
+  filter_html:
+    id: filter_html
+    provider: filter
     status: true
-    weight: 11
-    settings: {  }
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol start type> <strong> <em> <code> <li> <img src alt data-entity-uuid data-entity-type height width data-caption data-align>'
+      filter_html_help: false
+      filter_html_nofollow: false
   filter_align:
     id: filter_align
     provider: filter
@@ -28,15 +31,6 @@ filters:
     status: true
     weight: 8
     settings: {  }
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: true
-    weight: -10
-    settings:
-      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol start type> <strong> <em> <code> <li> <img src alt data-entity-uuid data-entity-type height width data-caption data-align>'
-      filter_html_help: false
-      filter_html_nofollow: false
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
@@ -48,4 +42,10 @@ filters:
     provider: filter
     status: true
     weight: 15
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
     settings: {  }

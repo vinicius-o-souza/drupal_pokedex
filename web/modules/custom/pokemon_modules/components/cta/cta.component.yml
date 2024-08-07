@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Call to Action
+description: Call to action link.
+props:
+  type: object
+  required:
+    - text
+    - href
+  properties:
+    text:
+      type: string
+      title: Text
+      description: The text for the CTA
+      examples:
+        - Press
+        - Submit now
+    href:
+      type: string
+      title: URL
+      format: uri
+      examples:
+        - <front>
+        - https://www.google.com
+    target:
+      type: string
+      title: Target
+      enum:
+        - _self
+        - _blank

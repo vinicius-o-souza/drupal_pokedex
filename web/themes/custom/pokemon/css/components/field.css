@@ -1,0 +1,50 @@
+.form-item label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.form-item input:not([type=checkbox]):not([type=radio]),
+.form-item select,
+.form-item textarea {
+  background: #F2F2F2;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  color: #000000;
+  font-size: 1rem;
+  height: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 0.75rem;
+  width: 100%;
+}
+.form-item input[type=radio] {
+  height: auto;
+  width: auto;
+}
+.form-item .description {
+  font-size: 1rem;
+}
+.form-item.form-composite-type--radios legend {
+  background-color: #F2F2F2;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 0.75rem;
+}
+.form-item.form-composite-type--radios legend .bi {
+  float: right;
+}
+.form-item.form-composite-type--radios .fieldset-wrapper {
+  position: relative;
+  width: 100%;
+}
+.form-item.form-composite-type--radios .fieldset-wrapper.active > .form-radios {
+  display: block;
+}
+.form-item.form-composite-type--radios .fieldset-wrapper > .form-radios {
+  display: none;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+}

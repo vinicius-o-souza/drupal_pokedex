@@ -1,4 +1,4 @@
-uuid: eab46217-8bd7-4f67-ae84-a984d4591940
+uuid: 36d5271a-b4a1-4459-b8eb-6120e286d05c
 langcode: en
 status: true
 dependencies:
@@ -61,6 +61,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -95,6 +102,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

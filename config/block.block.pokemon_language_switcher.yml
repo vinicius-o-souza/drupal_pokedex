@@ -1,0 +1,20 @@
+uuid: 77089451-a240-4a70-be96-d9551306d22b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - pokemon
+id: pokemon_language_switcher
+theme: pokemon
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

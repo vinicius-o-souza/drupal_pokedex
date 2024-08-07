@@ -1,0 +1,22 @@
+uuid: c96c5c4d-9480-425c-959f-9208f5a5f9aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pokemon
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: pokemon_content
+theme: pokemon
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

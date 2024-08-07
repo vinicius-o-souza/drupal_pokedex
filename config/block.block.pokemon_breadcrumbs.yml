@@ -1,0 +1,22 @@
+uuid: ba3f64f4-9d0f-4344-818e-bbe6690ce0ec
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - pokemon
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: pokemon_breadcrumbs
+theme: pokemon
+region: breadcrumb
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

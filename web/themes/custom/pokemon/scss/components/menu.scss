@@ -1,0 +1,23 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+ul {
+  &.menu {
+    margin-left: 0;
+  }
+}
+
+.navigation {
+  .nav {
+    .nav-item {
+      .nav-link {
+        color: $dark;
+        &:hover,
+        &.is-active {
+          border-bottom: 2px solid $dark;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
