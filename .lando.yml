@@ -1,0 +1,6 @@
+name: drupal-pokedex
+recipe: pantheon
+config:
+  framework: drupal8
+  site: drupal-pokedex
+  id: 04d13236-b921-425b-b9d3-2f3eda2e3069
