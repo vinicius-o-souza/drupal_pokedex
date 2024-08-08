@@ -1,22 +1,22 @@
-# Composer-enabled Drupal template
+# Drupal Pokedex
 
-This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
-that work with the Platform's Integrated Composer build process. It is also the
-Platform's standard Drupal 9 upstream.
+A Pokedex website made with Drupal.
 
-Unlike with earlier Pantheon upstreams, files such as Drupal Core that you are
-unlikely to adjust while building sites are not in the main branch of the 
-repository. Instead, they are referenced as dependencies that are installed by
-Composer.
+## Project Website
 
-For more information and detailed installation guides, please visit the
-Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-composer
+The link for this project [Pokedex](https://pokedexvinicius.online)
 
-## Contributing
+## Technologies used:
 
-Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-composer-managed` repository is a mirror that does not
-directly accept pull requests.
+* Drupal 10
+* SASS
+* Javascript
+* DDEV for Local Environment
+* AWS for Hosting
+* GoDaddy for Domain
+* Let's encrypt for HTTPS SSL
+* Github Actions for Deploy
 
-Instead, to propose a change, please fork [pantheon-systems/drupal-composer-managed](https://github.com/pantheon-systems/drupal-composer-managed)
-and submit a PR to that repository.
+## Layout inspiration:
+
+The layout of this project is inspired by the work of [Emmanuel Paiva](https://www.figma.com/community/file/893705420616737018/pokedex)
