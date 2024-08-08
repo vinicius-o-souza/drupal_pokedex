@@ -5,7 +5,6 @@ props:
   type: object
   required:
     - text
-    - href
   properties:
     text:
       type: string
