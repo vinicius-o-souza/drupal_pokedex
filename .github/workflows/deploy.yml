@@ -13,16 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.4
-      with:
-        ssh-private-key: ${{ secrets.PANTHEON_SSH_PRIVATE_KEY }}
-
     - name: Add Pantheon remote
       run: |
         git remote add pantheon ${{ secrets.PANTHEON_SSH_URL }}
         git fetch pantheon
-
     
-    - name: Push to Pantheon
-      run: git push pantheon master
+    # - name: Push to Pantheon
+    #   run: git push pantheon master
