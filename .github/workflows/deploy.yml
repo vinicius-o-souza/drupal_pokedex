@@ -23,4 +23,4 @@ jobs:
         git remote add pantheon ${{ secrets.PANTHEON_SSH_URL }}
 
     - name: Push to Pantheon
-      run: git push pantheon main
+      run: git push pantheon master
