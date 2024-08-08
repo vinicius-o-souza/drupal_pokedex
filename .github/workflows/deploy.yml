@@ -32,6 +32,13 @@ jobs:
     #   run: |
     #     mkdir -p ~/.ssh
     #     ssh-keyscan -p 2222 ${{ secrets.PANTHEON_SSH_URL }} >> ~/.ssh/known_hosts
+
+    - name: Add SSH Key to Known Hosts
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan ${{ secrets.PANTHEON_SSH_URL }} >> ~/.ssh/known_hosts
     
     - name: Push to Pantheon
       run: git push pantheon master
