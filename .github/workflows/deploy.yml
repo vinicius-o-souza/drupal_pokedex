@@ -13,22 +13,25 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Decode SSH key
-      run: echo "${{ secrets.PANTHEON_SSH_KEY_BASE64 }}" | base64 -d > /tmp/pantheon_ssh_key
+    # - name: Decode SSH key
+    #   run: echo "${{ secrets.PANTHEON_SSH_KEY_BASE64 }}" | base64 -d > /tmp/pantheon_ssh_key
+    #   shell: bash
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.7.0
-      with:
-        ssh-private-key: /tmp/pantheon_ssh_key
+    # - name: Set permissions on the SSH key
+    #   run: chmod 600 /tmp/pantheon_ssh_key
+
+    # - name: Set up SSH
+    #   uses: webfactory/ssh-agent@v0.7.0
+    #   with:
+    #     ssh-private-key: /tmp/pantheon_ssh_key
 
     - name: Add Pantheon remote
-      run: |
-        git remote add pantheon ${{ secrets.PANTHEON_SSH_URL }}
+      run: git remote add pantheon ${{ secrets.PANTHEON_SSH_URL }}
 
-    - name: Accept Pantheon host key
-      run: |
-        mkdir -p ~/.ssh
-        ssh-keyscan -p 2222 ${{ secrets.PANTHEON_SSH_URL }} >> ~/.ssh/known_hosts
+    # - name: Accept Pantheon host key
+    #   run: |
+    #     mkdir -p ~/.ssh
+    #     ssh-keyscan -p 2222 ${{ secrets.PANTHEON_SSH_URL }} >> ~/.ssh/known_hosts
     
     - name: Push to Pantheon
       run: git push pantheon master
