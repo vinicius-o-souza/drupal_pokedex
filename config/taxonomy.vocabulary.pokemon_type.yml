@@ -8,3 +8,4 @@ name: 'Pokemon Type'
 vid: pokemon_type
 description: 'List of available pokemons'
 weight: 0
+new_revision: false

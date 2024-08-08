@@ -11,7 +11,7 @@ dependencies:
 id: pokemon_footer_menu
 theme: pokemon
 region: footer
-weight: -6
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
