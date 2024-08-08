@@ -38,7 +38,7 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.PANTHEON_SSH_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan ssh://codeserver.dev.04d13236-b921-425b-b9d3-2f3eda2e3069@codeserver.dev.04d13236-b921-425b-b9d3-2f3eda2e3069.drush.in >> ~/.ssh/known_hosts
+        ssh-keyscan codeserver.dev.04d13236-b921-425b-b9d3-2f3eda2e3069@codeserver.dev.04d13236-b921-425b-b9d3-2f3eda2e3069.drush.in >> ~/.ssh/known_hosts
     
     - name: Push to Pantheon
       run: git push pantheon master
