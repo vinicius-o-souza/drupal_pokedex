@@ -14,7 +14,6 @@ dependencies:
     - path
     - system
     - taxonomy
-    - tour
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
@@ -26,7 +25,6 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
-  - 'access tour'
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'

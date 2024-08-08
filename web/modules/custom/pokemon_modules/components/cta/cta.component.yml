@@ -27,3 +27,4 @@ props:
       enum:
         - _self
         - _blank
+      default: _self

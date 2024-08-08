@@ -5,6 +5,8 @@
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
+$settings['config_sync_directory'] = '../config/sync';
+
 /**
  * Include the Pantheon-specific settings file.
  *

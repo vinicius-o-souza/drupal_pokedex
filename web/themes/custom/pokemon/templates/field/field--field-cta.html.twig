@@ -44,7 +44,7 @@
   {% include 'pokemon_modules:cta' with {
     text: item.content['#title'],
     href: item.content['#url'],
-    target: item.content['#options']['attributes']['target'] ?? '_same'
+    target: item.content['#options']['attributes']['target'] ?? '_self'
   } %}
 
 {% endblock %}
