@@ -1,0 +1,6 @@
+name: Example Form
+description: A module that provides a simple form.
+package: Custom
+type: module
+core: 10.x
+core_version_requirement: ^10

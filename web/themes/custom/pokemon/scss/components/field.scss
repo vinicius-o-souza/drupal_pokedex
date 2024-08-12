@@ -10,18 +10,15 @@
   input:not([type=checkbox]):not([type=radio]),
   select,
   textarea {
-    background: $light;
-    border-radius: pxToRem(12);
+    @include makeBox();
     border: none;
-    box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.20);
     color: $black;
     font-size: pxToRem(16);
     height: 100%;
-    margin-bottom: pxToRem(8);
-    padding: pxToRem(12) pxToRem(12);
     width: 100%;
   }
-  input[type=radio] {
+  input[type=radio],
+  input[type=checkbox] {
     height: auto;
     width: auto;
   }
@@ -29,32 +26,21 @@
     font-size: pxToRem(16);
   }
 
-  &.form-composite-type--radios {
-    legend {
-      background-color: $light;
-      border-radius: pxToRem(12);
-      box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.20);
-      font-weight: 400;
-      margin-bottom: pxToRem(8);
-      padding: pxToRem(12) pxToRem(12);
-      .bi {
-        float: right;
-      }
-    }
+  &.form-wrapper {
+    @include makeBox();
     .fieldset-wrapper {
       position: relative;
       width: 100%;
-      &.active {
-        > .form-radios {
-          display: block;
-        }
-      }
-      > .form-radios {
-        display: none;
-        padding: 0;
-        position: absolute;
-        z-index: 1;
-      }
     }
+  }
+}
+
+details.form-wrapper {
+  @include makeBox();
+  border: none;
+  .form-wrapper,
+  .form-item {
+    box-shadow: none;
+    padding: 0;
   }
 }
