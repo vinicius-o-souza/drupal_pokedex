@@ -1,4 +1,5 @@
 label: 'Blocos de conteúdo'
+description: 'Encontrar e gerenciar blocos de conteúdo'
 display:
   default:
     display_title: Padrão
@@ -7,8 +8,10 @@ display:
       fields:
         info:
           label: 'Descrição do bloco'
+          separator: ', '
         type:
           label: 'Tipo de bloco'
+          separator: ', '
         changed:
           label: Atualizado
         operations:
@@ -29,6 +32,9 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+      empty:
+        area_text_custom:
+          content: 'Não existem blocos de conteúdo disponíveis.'
       filters:
         info:
           expose:
@@ -41,3 +47,4 @@ display:
     display_options:
       menu:
         title: Blocos
+        description: 'Criar e editar blocos de conteúdo'

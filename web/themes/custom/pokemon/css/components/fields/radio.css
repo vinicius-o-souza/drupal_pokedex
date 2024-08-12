@@ -1,17 +1,20 @@
-.form-radios {
-  background-color: #F2F2F2;
-  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
-  border-radius: 0.75rem;
-  padding: 1rem;
+.form-type-radio {
+  padding: 1rem 0;
+  position: relative;
   width: 100%;
 }
-.form-radios input {
+.form-type-radio input {
   display: none;
 }
-.form-radios .bi {
+.form-type-radio .bi {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.form-radios label {
+.form-type-radio label {
   padding-left: 3rem;
   position: relative;
+}
+.form-type-radio label:hover {
+  cursor: pointer;
 }

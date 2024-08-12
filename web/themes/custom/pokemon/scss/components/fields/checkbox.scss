@@ -1,0 +1,21 @@
+@import "../../mixins/mixins";
+@import "../../variables/variables";
+
+.form-type-checkbox {
+  @include makeBox();
+  position: relative;
+  width: 100%;
+  input {
+    display: none;
+  }
+  .bi {
+    position: absolute;
+  }
+  label {
+    padding-left: pxToRem(48);
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

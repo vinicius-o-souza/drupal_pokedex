@@ -101,10 +101,10 @@ display:
         type: bef
         options:
           submit_button: Search
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
           text_input_required: 'Select any filter and click on Apply to see results'
@@ -126,6 +126,7 @@ display:
                 advanced:
                   placeholder_text: ''
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_pokemon_types_target_id:
                 plugin_id: bef
@@ -133,9 +134,11 @@ display:
                   sort_options: true
                   rewrite:
                     filter_rewrite_values: ''
-                  collapsible: false
+                    filter_rewrite_values_key: false
+                  collapsible: true
+                  collapsible_disable_automatic_open: true
                   is_secondary: false
-                select_all_none: true
+                select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
       access:
@@ -246,7 +249,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
-          operator: or
+          operator: and
           value: {  }
           group: 1
           exposed: true
@@ -261,7 +264,7 @@ display:
             identifier: type
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -337,7 +340,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -365,7 +367,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

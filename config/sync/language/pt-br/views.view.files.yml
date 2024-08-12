@@ -6,13 +6,17 @@ display:
     display_options:
       title: Arquivos
       fields:
+        fid:
+          label: Fid
         filename:
           label: Nome
+          separator: ', '
         filemime:
           label: 'Tipo MIME'
         filesize:
           label: Tamanho
         status:
+          label: Status
           settings:
             format_custom_false: Temporário
             format_custom_true: Permanente
@@ -22,6 +26,9 @@ display:
           label: 'Data de alteração'
         count:
           label: 'Usado em'
+          alter:
+            path: 'admin/content/files/usage/{{ fid }}'
+          format_plural_string: !!binary MSBsb2NhbANAY291bnQgbG9jYWlz
         operations:
           label: Operações
       pager:
@@ -50,6 +57,9 @@ display:
         filemime:
           expose:
             label: 'Tipo MIME'
+        status:
+          expose:
+            label: Status
   page_1:
     display_title: 'Visão geral de arquivos'
     display_options:
@@ -68,6 +78,7 @@ display:
           label: 'Registrando módulo'
         count:
           label: 'Usar contador'
+          format_plural_string: !!binary MQNAY291bnQ=
       pager:
         options:
           tags:

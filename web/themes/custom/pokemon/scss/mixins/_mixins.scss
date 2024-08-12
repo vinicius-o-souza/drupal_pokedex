@@ -9,3 +9,12 @@
 @function pxToRem($value) {
   @return math.div($value, $baseline) * 1rem;
 }
+
+@mixin makeBox() {
+  background-color: $light;
+  border-radius: pxToRem(12);
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.20);
+  font-weight: 400;
+  margin-bottom: pxToRem(8);
+  padding: pxToRem(12);
+}

@@ -1,0 +1,19 @@
+uuid: 53f2add4-0d24-464b-b605-c159588bbae3
+langcode: en
+status: true
+dependencies: {  }
+id: development
+label: Development
+description: 'Configuration for Development Environments'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: /development
+module:
+  field_ui: 0
+  views_ui: 0
+theme: {  }
+complete_list:
+  - field_ui.settings
+partial_list: {  }

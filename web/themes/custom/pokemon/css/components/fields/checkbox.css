@@ -1,0 +1,23 @@
+.form-type-checkbox {
+  background-color: #F2F2F2;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  position: relative;
+  width: 100%;
+}
+.form-type-checkbox input {
+  display: none;
+}
+.form-type-checkbox .bi {
+  position: absolute;
+}
+.form-type-checkbox label {
+  padding-left: 3rem;
+  position: relative;
+}
+.form-type-checkbox label:hover {
+  cursor: pointer;
+}
