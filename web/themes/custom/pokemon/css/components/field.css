@@ -1,4 +1,5 @@
-.form-item label {
+.form-item label,
+.form-item legend {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -25,31 +26,4 @@
 }
 .form-item .description {
   font-size: 1rem;
-}
-.form-item.form-wrapper {
-  background-color: #F2F2F2;
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  padding: 0.75rem;
-}
-.form-item.form-wrapper .fieldset-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-details.form-wrapper {
-  background-color: #F2F2F2;
-  border-radius: 0.75rem;
-  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  padding: 0.75rem;
-  border: none;
-}
-details.form-wrapper .form-wrapper,
-details.form-wrapper .form-item {
-  box-shadow: none;
-  padding: 0;
 }

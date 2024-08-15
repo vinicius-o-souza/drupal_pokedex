@@ -2,9 +2,14 @@
 @import "../../variables/variables";
 
 details.form-wrapper {
+  @include makeBox();
+  border: none;
+  padding: 0;
+  position: relative;
   summary {
     font-size: pxToRem(16);
     font-weight: 700;
+    padding: pxToRem(12);
     position: relative;
     &::marker {
       content: none;
@@ -12,7 +17,25 @@ details.form-wrapper {
     }
     .bi {
       position: absolute;
-      right: 0;
+      right: 10px;
     }
+  }
+  .details-wrapper {
+    background: $light;
+    border-radius: pxToRem(12);
+    box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.20);
+    left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    position: absolute;
+    top: calc(100% + 4px);
+    width: 100%;
+    z-index: 20;
+  }
+  .fieldset-wrapper,
+  .form-wrapper,
+  .form-item {
+    box-shadow: none;
+    padding: 0;
   }
 }

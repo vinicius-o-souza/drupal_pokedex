@@ -17,37 +17,48 @@
 #}
 {{ attach_library('pokemon/details') }}
 
-<details{{ attributes }}>
-  {%- if title -%}
-    {%
-      set summary_classes = [
-        required ? 'js-form-required',
-        required ? 'form-required',
-      ]
-    %}
-    <summary{{ summary_attributes.addClass(summary_classes) }}>
-      {% if attributes.open %}
-        <i class="bi bi-chevron-up"></i>
-      {% else %}
-        <i class="bi bi-chevron-down"></i>
+{%
+  set classes = [
+    'js-form-item',
+    'form-item',
+    'js-form-type-details',
+    'form-type-details',
+    'js-form-item-details',
+  ]
+%}
+<div class="{{ classes|join(' ') }}">
+  <details{{ attributes }}>
+    {%- if title -%}
+      {%
+        set summary_classes = [
+          required ? 'js-form-required',
+          required ? 'form-required',
+        ]
+      %}
+      <summary{{ summary_attributes.addClass(summary_classes) }}>
+        {% if attributes.open %}
+          <i class="bi bi-chevron-up"></i>
+        {% else %}
+          <i class="bi bi-chevron-down"></i>
+        {% endif %}
+        {{ title }}
+      </summary>
+    {%- endif -%}
+    <div class="details-wrapper">
+      {% if errors %}
+        <div class="form-item--error-message">
+          <strong>{{ errors }}</strong>
+        </div>
       {% endif %}
-      {{ title }}
-    </summary>
+      {%- if children -%}
+        {{ children }}
+      {%- endif -%}
+      {%- if value -%}
+        {{ value }}
+      {%- endif -%}
+    </div>
+  </details>
+  {%- if description -%}
+    <div class="details-description">{{ description }}</div>
   {%- endif -%}
-  <div class="details-wrapper">
-    {% if errors %}
-      <div class="form-item--error-message">
-        <strong>{{ errors }}</strong>
-      </div>
-    {% endif %}
-    {%- if description -%}
-      <div class="details-description">{{ description }}</div>
-    {%- endif -%}
-    {%- if children -%}
-      {{ children }}
-    {%- endif -%}
-    {%- if value -%}
-      {{ value }}
-    {%- endif -%}
-  </div>
-</details>
+</div>

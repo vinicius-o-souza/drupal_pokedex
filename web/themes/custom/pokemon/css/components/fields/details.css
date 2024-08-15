@@ -1,6 +1,18 @@
+details.form-wrapper {
+  background-color: #F2F2F2;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border: none;
+  padding: 0;
+  position: relative;
+}
 details.form-wrapper summary {
   font-size: 1rem;
   font-weight: 700;
+  padding: 0.75rem;
   position: relative;
 }
 details.form-wrapper summary::marker {
@@ -9,5 +21,23 @@ details.form-wrapper summary::marker {
 }
 details.form-wrapper summary .bi {
   position: absolute;
-  right: 0;
+  right: 10px;
+}
+details.form-wrapper .details-wrapper {
+  background: #F2F2F2;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  left: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  position: absolute;
+  top: calc(100% + 4px);
+  width: 100%;
+  z-index: 20;
+}
+details.form-wrapper .fieldset-wrapper,
+details.form-wrapper .form-wrapper,
+details.form-wrapper .form-item {
+  box-shadow: none;
+  padding: 0;
 }

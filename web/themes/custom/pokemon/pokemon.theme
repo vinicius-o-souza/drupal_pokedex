@@ -47,6 +47,27 @@ function pokemon_preprocess_links__language_block(array &$variables) {
 }
 
 /**
+ * Implements hook_preprocess_views_exposed_form().
+ */
+function pokemon_preprocess_views_exposed_form(array &$variables): void {
+  $form = &$variables['form'];
+  if (isset($form['secondary']) && $form['secondary']['#type'] === 'details') {
+    $form['secondary']['#open'] = FALSE;
+  }
+}
+
+function pokemon_preprocess_form_element(&$variables) {
+  $element = $variables['element'];
+  if ($element['#type'] === 'number') {
+    if ($element['#theme'] === 'bef_number') {      
+      if (strpos($element['#id'], '-min') !== FALSE || strpos($element['#id'], '-max') !== FALSE) {
+        $variables['label'] = '';
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function pokemon_theme_suggestions_page_alter(array &$suggestions, array $variables) {

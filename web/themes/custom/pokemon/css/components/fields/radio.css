@@ -1,5 +1,14 @@
+.form-composite-type--radios .fieldset-wrapper {
+  background-color: #F2F2F2;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+}
+
 .form-type-radio {
-  padding: 1rem 0;
+  padding: 0;
   position: relative;
   width: 100%;
 }

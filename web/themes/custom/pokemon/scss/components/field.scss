@@ -2,7 +2,8 @@
 @import "../variables/variables";
 
 .form-item {
-  label {
+  label,
+  legend {
     font-size: pxToRem(16);
     font-weight: 700;
     margin-bottom: pxToRem(8);
@@ -24,23 +25,5 @@
   }
   .description {
     font-size: pxToRem(16);
-  }
-
-  &.form-wrapper {
-    @include makeBox();
-    .fieldset-wrapper {
-      position: relative;
-      width: 100%;
-    }
-  }
-}
-
-details.form-wrapper {
-  @include makeBox();
-  border: none;
-  .form-wrapper,
-  .form-item {
-    box-shadow: none;
-    padding: 0;
   }
 }

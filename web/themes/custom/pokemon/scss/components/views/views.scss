@@ -18,12 +18,53 @@
 }
 
 .view-pokemons {
-  &.view-display-id-page_1 {
-    .view-filters {
+  .view-filters {
+    .views-exposed-form {
       .form-type-textfield {
         width: 100%;
         input {
           padding: pxToRem(24);
+        }
+      }
+      .form-type-details {
+        .bef--secondary {
+          summary {
+            padding: pxToRem(24);
+          }
+          .details-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            @include media-breakpoint-up(md) {
+              column-gap: pxToRem(16);
+              flex-direction: row;
+            }
+            .form-wrapper {
+              @include media-breakpoint-up(lg) {
+                flex: 0 1 16.6666667%;
+              }
+              &.form-composite {
+                flex: 0 1 25%;
+                @include media-breakpoint-up(lg) {
+                  flex: 0 1 50%;
+                }
+                .form-radios,
+                .form-checkboxes {
+                  @include media-breakpoint-up(lg) {
+                    display: flex;
+                    max-width: 100%;
+                    flex-wrap: wrap;
+                  }
+                  .form-item {
+                    @include media-breakpoint-up(lg) {
+                      flex: 0 1 25%;
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
