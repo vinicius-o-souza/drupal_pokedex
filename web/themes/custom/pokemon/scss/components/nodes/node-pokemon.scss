@@ -107,8 +107,12 @@
       color: #FFFFFF;
       text-align: center;
       h1 {
+        font-size: pxToRem(52);
         color: #FFFFFF;
         text-shadow: 3px 2px 0px rgba(0,0,0,0.51);
+        @include media-breakpoint-up(md) {
+          font-size: pxToRem(72);
+        }
       }
       .field--name-field-pokeapi-id {
         font-weight: bold;
@@ -116,6 +120,7 @@
       .pokemon--image {
         margin-bottom: -80px;
         max-width: 400px;
+        width: 100%;
       }
     }
     .node__content {
