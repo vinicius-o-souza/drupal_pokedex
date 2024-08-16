@@ -1,0 +1,22 @@
+uuid: e9035c2d-1257-4467-9275-bf1a4e9fceb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: pokemon_move
+label: 'Pokemon Move'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/move/[term:name]'
+selection_criteria:
+  6a2f2b89-14e3-4ed3-95bd-9f9d302de055:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 6a2f2b89-14e3-4ed3-95bd-9f9d302de055
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      pokemon_move: pokemon_move
+selection_logic: and
+weight: -5
+relationships: {  }

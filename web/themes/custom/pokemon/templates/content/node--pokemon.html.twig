@@ -67,7 +67,6 @@
  *
  */
 #}
-
 {%
   set classes = [
     'node',
@@ -77,26 +76,38 @@
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     pokemon_type,
+    'mt-5 mb-5'
   ]
 %}
 
 {{ attach_library('pokemon/node_pokemon') }}
 <article{{ attributes.addClass(classes) }}>
-  <a href="{{ url|raw }}" rel="bookmark">
-    <header>
-      {{ title_prefix }}
-      {% if label and not page %}
-        {% include '@pokemon/includes/pokemon--image.html.twig' with {
-          label: label,
-          pokeapi_id: node.field_pokeapi_id.value,
-        }%}
-        {{ content.field_pokeapi_id }}
-        <h3{{ title_attributes.addClass('node__title') }}>{{ label }}</h3>
-      {% endif %}
-      {{ title_suffix }}
-    </header>
-    <div{{ content_attributes.addClass('node__content') }}>
-      {{ content|without('field_pokeapi_id') }}
-    </div>
-  </a>
+
+  <header>
+    {{ title_prefix }}
+    {% if label %}
+      <h1{{ title_attributes.addClass('node__title') }}>{{ label }}</h1>
+      {{ content.field_pokeapi_id }}
+      {% include '@pokemon/includes/pokemon--image.html.twig' with {
+        label: label,
+        pokeapi_id: node.field_pokeapi_id.value,
+      }%}
+    {% endif %}
+    {{ title_suffix }}
+  </header>
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('field_pokeapi_id') }}
+  </div>
+
 </article>

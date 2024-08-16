@@ -1,6 +1,6 @@
 uuid: ba3f64f4-9d0f-4344-818e-bbe6690ce0ec
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -19,4 +19,8 @@ settings:
   label: Breadcrumbs
   label_display: '0'
   provider: system
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: ''

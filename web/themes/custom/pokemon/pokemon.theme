@@ -26,7 +26,18 @@ function pokemon_preprocess_page(array &$variables): void {
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function pokemon_preprocess_node(array &$variables): void {
+  $node = $variables['node'];
 
+  if ($node instanceof Node) {
+    if ($node->bundle() === 'pokemon') {
+      $pokemonTypes = $node->get('field_pokemon_types')->referencedEntities();
+      if (!empty($pokemonTypes)) {
+        $pokemonType = $pokemonTypes[0];
+        $pokemonType = strtolower($pokemonType->label());
+        $variables['pokemon_type'] = $pokemonType;
+      }
+    }
+  }
 }
 
 /**

@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for displaying a tablesort indicator.
+ *
+ * Available variables:
+ * - style: Either 'asc' or 'desc', indicating the sorting direction.
+ */
+#}
+{%
+  set classes = [
+    'tablesort',
+    'tablesort--' ~ style,
+  ]
+%}
+<span{{ attributes.addClass(classes) }}>
+  {% if style == 'asc' -%}
+    <i class="bi bi-chevron-up"></i>
+  {% else -%}
+    <i class="bi bi-chevron-down"></i>
+  {% endif %}
+  <span class="visually-hidden">
+    {% if style == 'asc' -%}
+      {{ 'Sort ascending'|t }}
+    {% else -%}
+      {{ 'Sort descending'|t }}
+    {% endif %}
+  </span>
+</span>
