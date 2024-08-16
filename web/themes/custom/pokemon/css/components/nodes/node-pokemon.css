@@ -103,8 +103,14 @@
   text-align: center;
 }
 .node--type-pokemon.node--view-mode-full header h1 {
+  font-size: 3.25rem;
   color: #FFFFFF;
   text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.51);
+}
+@media (min-width: 768px) {
+  .node--type-pokemon.node--view-mode-full header h1 {
+    font-size: 4.5rem;
+  }
 }
 .node--type-pokemon.node--view-mode-full header .field--name-field-pokeapi-id {
   font-weight: bold;
@@ -112,6 +118,7 @@
 .node--type-pokemon.node--view-mode-full header .pokemon--image {
   margin-bottom: -80px;
   max-width: 400px;
+  width: 100%;
 }
 .node--type-pokemon.node--view-mode-full .node__content {
   background-color: #F2F2F2;
