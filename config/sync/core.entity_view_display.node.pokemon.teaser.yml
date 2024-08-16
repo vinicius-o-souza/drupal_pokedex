@@ -6,9 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.pokemon.body
     - field.field.node.pokemon.field_pokeapi_id
+    - field.field.node.pokemon.field_pokemon_abilities
     - field.field.node.pokemon.field_pokemon_experience
     - field.field.node.pokemon.field_pokemon_height
+    - field.field.node.pokemon.field_pokemon_moves
     - field.field.node.pokemon.field_pokemon_order
+    - field.field.node.pokemon.field_pokemon_stats
     - field.field.node.pokemon.field_pokemon_types
     - field.field.node.pokemon.field_pokemon_weight
     - node.type.pokemon
@@ -40,9 +43,12 @@ content:
     region: content
 hidden:
   body: true
+  field_pokemon_abilities: true
   field_pokemon_experience: true
   field_pokemon_height: true
+  field_pokemon_moves: true
   field_pokemon_order: true
+  field_pokemon_stats: true
   field_pokemon_weight: true
   langcode: true
   links: true

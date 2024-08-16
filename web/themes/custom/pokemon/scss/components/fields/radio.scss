@@ -1,10 +1,18 @@
 @import "../../mixins/mixins";
 @import "../../variables/variables";
 
+
+.form-composite-type--radios {
+  .fieldset-wrapper {
+    @include makeBox();
+  }
+}
+
 .form-type-radio {
-  padding: pxToRem(16) 0;
+  padding: 0;
   position: relative;
   width: 100%;
+  
   input {
     display: none;
   }

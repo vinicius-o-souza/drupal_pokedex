@@ -68,17 +68,21 @@
     </header>
   {% endblock %}
 
-  <div class="site-breadcrumb">
-    <div class="container">
-      {{ page.breadcrumb }}
+  {% if page.breadcrumb %}
+    <div class="site-breadcrumb">
+      <div class="container">
+        {{ page.breadcrumb }}
+      </div>
     </div>
-  </div>
+  {% endif %}
 
-  <div class="site-featured">
-    <div class="container">
-      {{ page.featured }}
+  {% if page.featured %}
+    <div class="site-featured">
+      <div class="container">
+        {{ page.featured }}
+      </div>
     </div>
-  </div>
+  {% endif %}
 
   {% block main %}
     <main role="main">

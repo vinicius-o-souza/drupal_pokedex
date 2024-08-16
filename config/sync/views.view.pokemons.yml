@@ -104,7 +104,7 @@ display:
           reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: false
+          expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
           text_input_required: 'Select any filter and click on Apply to see results'
@@ -116,9 +116,9 @@ display:
               autosubmit_textfield_delay: 500
               autosubmit_hide: false
               input_required: false
-              allow_secondary: false
+              allow_secondary: true
               secondary_label: 'Advanced options'
-              secondary_open: false
+              secondary_open: true
               reset_button_always_show: false
             filter:
               title:
@@ -135,12 +135,36 @@ display:
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
-                  collapsible: true
+                  collapsible: false
                   collapsible_disable_automatic_open: true
-                  is_secondary: false
+                  is_secondary: true
                 select_all_none: false
                 select_all_none_nested: false
-                display_inline: false
+                display_inline: true
+              field_pokemon_height_value:
+                plugin_id: bef_number
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: true
+                  is_secondary: true
+                max: null
+                min: null
+              field_pokemon_weight_value:
+                plugin_id: bef_number
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: true
+                  is_secondary: true
+                max: null
+                min: null
+              field_pokemon_experience_value:
+                plugin_id: bef_number
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: true
+                  is_secondary: true
+                max: null
+                min: null
       access:
         type: perm
         options:
@@ -171,8 +195,8 @@ display:
           plugin_id: standard
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
+            label: Order
+            field_identifier: field_pokemon_order_value
           exposed: false
       arguments: {  }
       filters:
@@ -293,6 +317,150 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_pokemon_height_value:
+          id: field_pokemon_height_value
+          table: node__field_pokemon_height
+          field: field_pokemon_height_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_pokemon_height_value_op
+            label: Height
+            description: 'The height of the Pokémon in decimetres.'
+            use_operator: false
+            operator: field_pokemon_height_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: height
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            min_placeholder: Min
+            max_placeholder: Max
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_pokemon_weight_value:
+          id: field_pokemon_weight_value
+          table: node__field_pokemon_weight
+          field: field_pokemon_weight_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_pokemon_weight_value_op
+            label: Weight
+            description: 'The weight of the Pokémon in hectograms.'
+            use_operator: false
+            operator: field_pokemon_weight_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: weight
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            min_placeholder: Min
+            max_placeholder: Max
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: 'Weight (field_pokemon_weight)'
+            description: null
+            identifier: field_pokemon_weight_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+        field_pokemon_experience_value:
+          id: field_pokemon_experience_value
+          table: node__field_pokemon_experience
+          field: field_pokemon_experience_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_pokemon_experience_value_op
+            label: Experience
+            description: ''
+            use_operator: false
+            operator: field_pokemon_experience_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: experience
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            min_placeholder: Min
+            max_placeholder: Max
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -343,8 +511,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
+  page:
+    id: page
     display_title: Page
     display_plugin: page
     position: 1
@@ -356,7 +524,7 @@ display:
         type: normal
         title: Pokemons
         description: ''
-        weight: 0
+        weight: -49
         expanded: false
         menu_name: main
         parent: ''

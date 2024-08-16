@@ -2,7 +2,8 @@
 @import "../variables/variables";
 
 .form-item {
-  label {
+  label,
+  legend {
     font-size: pxToRem(16);
     font-weight: 700;
     margin-bottom: pxToRem(8);
@@ -25,22 +26,153 @@
   .description {
     font-size: pxToRem(16);
   }
+}
 
-  &.form-wrapper {
-    @include makeBox();
-    .fieldset-wrapper {
-      position: relative;
-      width: 100%;
-    }
+progress.progress--bar {
+  border-radius: 7px; 
+  width: 80%;
+  height: 22px;
+  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+  &::-webkit-progress-bar {
+    background-color: $light;
+    border-radius: 7px;
+  }
+  &::-webkit-progress-value {
+    background-color: $primary;
+    border-radius: 7px;
   }
 }
 
-details.form-wrapper {
-  @include makeBox();
-  border: none;
-  .form-wrapper,
-  .form-item {
-    box-shadow: none;
-    padding: 0;
+.bug {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-bug);
+    }
+  }
+}
+.dark {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-dark);
+    }
+  }
+} 
+.dragon {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-dragon);
+    }
+  }
+} 
+.electric {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-electric);
+    }
+  }
+} 
+.fairy {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-fairy);
+    }
+  }
+} 
+.fighting {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-fighting);
+    }
+  }
+} 
+.fire {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-fire);
+    }
+  }
+} 
+.flying {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-flying);
+    }
+  }
+} 
+.ghost {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-ghost);
+    }
+  }
+} 
+.grass {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-grass);
+    }
+  }
+} 
+.ground {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-ground);
+    }
+  }
+} 
+.ice {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-ice);
+    }
+  }
+} 
+.normal {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-normal);
+    }
+  }
+} 
+.poison {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-poison);
+    }
+  }
+} 
+.psychic {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-psychic);
+    }
+  }
+} 
+.rock {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-rock);
+    }
+  }
+} 
+.steel {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-steel);
+    }
+  }
+}
+.shadow {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-shadow);
+    }
+  }
+}
+.water {
+  progress.progress--bar {
+    &::-webkit-progress-value {
+      background-color: var(--pokemon-water);
+    }
   }
 }

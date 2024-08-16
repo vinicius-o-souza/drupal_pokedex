@@ -1,0 +1,22 @@
+uuid: 88112c4d-01f2-4ba3-8e22-b27d8ea6e435
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: pokemon_ability
+label: 'Pokemon Ability'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/ability/[term:name]'
+selection_criteria:
+  14ad40e6-f24b-4cc3-a608-8e3554894247:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 14ad40e6-f24b-4cc3-a608-8e3554894247
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      pokemon_ability: pokemon_ability
+selection_logic: and
+weight: -5
+relationships: {  }

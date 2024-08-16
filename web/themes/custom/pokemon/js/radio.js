@@ -11,7 +11,6 @@
 
       once('pokemonRadio', 'input[type="radio"]', context).forEach(function (element) {
         const radio = document.querySelectorAll('input[type="radio"]');
-        console.log(radio);
         radio.forEach(radio => {
           radio.addEventListener('click', function(event) {
             let name = this.name;

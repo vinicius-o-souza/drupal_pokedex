@@ -1,3 +1,52 @@
+.view-pokemons .view-filters .views-exposed-form .form-type-textfield {
+  width: 100%;
+}
+.view-pokemons .view-filters .views-exposed-form .form-type-textfield input {
+  padding: 1.5rem;
+}
+.view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary summary {
+  padding: 1.5rem;
+}
+.view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper {
+    column-gap: 1rem;
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper {
+    flex: 0 1 16.6666667%;
+  }
+}
+.view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite {
+  flex: 0 1 25%;
+}
+@media (min-width: 992px) {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite {
+    flex: 0 1 50%;
+  }
+}
+@media (min-width: 992px) {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-radios,
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-checkboxes {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 992px) {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-radios .form-item,
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-checkboxes .form-item {
+    flex: 0 1 25%;
+    margin-right: 0;
+  }
+}
+
 .view {
   margin: 3.375rem 0;
 }
@@ -14,9 +63,49 @@
   }
 }
 
-.view-pokemons.view-display-id-page_1 .view-filters .form-type-textfield {
-  width: 100%;
+.view .table-responsive {
+  background-color: #F2F2F2;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 0;
 }
-.view-pokemons.view-display-id-page_1 .view-filters .form-type-textfield input {
-  padding: 1.5rem;
+.view .views-table {
+  margin: 0;
+  vertical-align: middle;
+}
+.view .views-table thead.thead-light th {
+  background-color: #F2F2F2;
+  color: #212121;
+}
+.view .views-table thead.thead-light th a {
+  align-items: center;
+  color: #212121;
+  display: flex;
+  column-gap: 0.5rem;
+}
+.view .views-table thead tr {
+  vertical-align: middle;
+}
+.view .views-table thead .tablesort.tablesort--desc, .view .views-table thead .tablesort.tablesort--asc {
+  background-image: none;
+}
+.view .views-table td.is-active {
+  background-color: white;
+}
+.view th,
+.view td,
+.view tr {
+  padding: 1rem;
+}
+.view th p,
+.view td p,
+.view tr p {
+  margin: 0;
+}
+.view td {
+  text-wrap: nowrap;
 }

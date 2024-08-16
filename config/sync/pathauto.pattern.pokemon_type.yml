@@ -1,0 +1,22 @@
+uuid: ee21174f-0642-4f01-8f64-8d6ba572431f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: pokemon_type
+label: 'Pokemon Type'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/type/[term:name]'
+selection_criteria:
+  b6aa6668-6e1b-4144-a522-8263b19dea1b:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b6aa6668-6e1b-4144-a522-8263b19dea1b
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      pokemon_type: pokemon_type
+selection_logic: and
+weight: -5
+relationships: {  }

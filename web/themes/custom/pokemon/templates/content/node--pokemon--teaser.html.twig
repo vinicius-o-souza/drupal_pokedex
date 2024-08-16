@@ -76,13 +76,13 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    pokemon_type,
   ]
 %}
 
 {{ attach_library('pokemon/node_pokemon') }}
 <article{{ attributes.addClass(classes) }}>
-  {# <a href="{{ url|raw }}" rel="bookmark"> #}
-  <a href="#" rel="bookmark">
+  <a href="{{ url|raw }}" rel="bookmark">
     <header>
       {{ title_prefix }}
       {% if label and not page %}

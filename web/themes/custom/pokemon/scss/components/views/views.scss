@@ -1,5 +1,6 @@
 @import "../../mixins/mixins";
 @import "../../variables/variables";
+@import "view-pokemon";
 
 .view {
   margin: pxToRem(54) 0;
@@ -17,15 +18,53 @@
   }
 }
 
-.view-pokemons {
-  &.view-display-id-page_1 {
-    .view-filters {
-      .form-type-textfield {
-        width: 100%;
-        input {
-          padding: pxToRem(24);
+.view {
+  .table-responsive {
+    @include makeBox();
+    margin-bottom: pxToRem(32);
+    padding: 0;
+  }
+  .views-table {
+    margin: 0;
+    vertical-align: middle;
+    thead {
+      &.thead-light {
+        th {
+          background-color: $light;
+          color: $dark;
+          a {
+            align-items: center;
+            color: $dark;
+            display: flex;
+            column-gap: pxToRem(8);
+          }
         }
       }
+      tr {
+        vertical-align: middle;
+      }
+      .tablesort {
+        &.tablesort--desc,
+        &.tablesort--asc {
+          background-image: none;
+        }
+      } 
     }
+    td {
+      &.is-active {
+        background-color: white;
+      }
+    }
+  }
+  th,
+  td,
+  tr {
+    padding: pxToRem(16);
+    p {
+      margin: 0;
+    }
+  }
+  td {
+    text-wrap: nowrap;
   }
 }

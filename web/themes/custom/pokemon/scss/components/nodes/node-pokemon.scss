@@ -2,9 +2,66 @@
 @import "../../variables/variables";
 
 .node--type-pokemon {
+  &.bug {
+    --pokemon-color: var(--pokemon-bug);
+  }
+  &.dark {
+    --pokemon-color: var(--pokemon-dark);
+  } 
+  &.dragon {
+    --pokemon-color: var(--pokemon-dragon);
+  } 
+  &.electric {
+    --pokemon-color: var(--pokemon-electric);
+  } 
+  &.fairy {
+    --pokemon-color: var(--pokemon-fairy);
+  } 
+  &.fighting {
+    --pokemon-color: var(--pokemon-fighting);
+  } 
+  &.fire {
+    --pokemon-color: var(--pokemon-fire);
+  } 
+  &.flying {
+    --pokemon-color: var(--pokemon-flying);
+  } 
+  &.ghost {
+    --pokemon-color: var(--pokemon-ghost);
+  } 
+  &.grass {
+    --pokemon-color: var(--pokemon-grass);
+  } 
+  &.ground {
+    --pokemon-color: var(--pokemon-ground);
+  } 
+  &.ice {
+    --pokemon-color: var(--pokemon-ice);
+  } 
+  &.normal {
+    --pokemon-color: var(--pokemon-normal);
+  } 
+  &.poison {
+    --pokemon-color: var(--pokemon-poison);
+  } 
+  &.psychic {
+    --pokemon-color: var(--pokemon-psychic);
+  } 
+  &.rock {
+    --pokemon-color: var(--pokemon-rock);
+  } 
+  &.steel {
+    --pokemon-color: var(--pokemon-steel);
+  }
+  &.shadow {
+    --pokemon-color: var(--pokemon-shadow);
+  }
+  &.water {
+    --pokemon-color: var(--pokemon-water);
+  }
   &.node--view-mode-teaser {
     a {
-      background: $light;
+      background-color: $light;
       border-radius: 12px;
       display: block;
       padding-bottom: pxToRem(24);
@@ -34,6 +91,39 @@
             margin: 0 pxToRem(4);
           }
         }
+      }
+    }
+  }
+
+  &.node--view-mode-full {
+    @include makeBox();
+    background-color: var(--pokemon-color);
+    margin: 0 auto;
+    max-width: 600px;
+    header {
+      background-image: url(../../../assets/images/pokeball.svg);
+      background-position: right top;
+      background-repeat: no-repeat;
+      color: #FFFFFF;
+      text-align: center;
+      h1 {
+        color: #FFFFFF;
+        text-shadow: 3px 2px 0px rgba(0,0,0,0.51);
+      }
+      .field--name-field-pokeapi-id {
+        font-weight: bold;
+      }
+      .pokemon--image {
+        margin-bottom: -80px;
+        max-width: 400px;
+      }
+    }
+    .node__content {
+      @include makeBox();
+      background-color: white;
+      padding-top: 120px;
+      .field--name-field-pokemon-stat {
+        color: var(--pokemon-color);
       }
     }
   }
