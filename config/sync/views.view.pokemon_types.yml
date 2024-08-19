@@ -6,6 +6,7 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.pokemon_type
   module:
+    - node
     - taxonomy
     - user
 id: pokemon_types
@@ -132,6 +133,52 @@ display:
           plugin_id: bundle
           value:
             pokemon_type: pokemon_type
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: reverse__node__field_pokemon_types
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -177,7 +224,7 @@ display:
       style:
         type: default
         options:
-          row_class: 'col-12 col-md-6 col-lg-3 mb-1 large'
+          row_class: 'col-12 col-md-6 col-lg-4 mb-1 m-auto large'
           default_row_class: true
           uses_fields: false
       row:
@@ -193,7 +240,18 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        reverse__node__field_pokemon_types:
+          id: reverse__node__field_pokemon_types
+          table: taxonomy_term_field_data
+          field: reverse__node__field_pokemon_types
+          relationship: none
+          group_type: group
+          admin_label: field_pokemon_types
+          entity_type: taxonomy_term
+          plugin_id: entity_reverse
+          required: false
+      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -210,11 +268,11 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
@@ -240,6 +298,7 @@ display:
             value: '<h1>List of all <strong>Types of Pokemon</strong>!</h1>'
             format: full_html
           tokenize: false
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
       path: type
       menu:
@@ -254,7 +313,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }

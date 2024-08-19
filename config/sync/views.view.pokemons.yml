@@ -468,7 +468,7 @@ display:
       style:
         type: default
         options:
-          row_class: 'col-12 col-md-6 col-lg-3 mb-1'
+          row_class: 'col-12 col-md-6 col-lg-3 mb-1 m-auto'
           default_row_class: true
           uses_fields: false
       row:
@@ -598,11 +598,15 @@ display:
         filter_groups: false
         header: false
       header: {  }
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
+      block_description: 'Random Pokémon'
+      block_category: 'Lists (Views)'
+      allow:
+        items_per_page: true
     cache_metadata:
       max-age: 0
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
