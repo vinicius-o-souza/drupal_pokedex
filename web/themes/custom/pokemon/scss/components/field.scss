@@ -28,19 +28,27 @@
   }
 }
 
-progress.progress--bar {
-  border-radius: 7px; 
-  width: 80%;
-  height: 22px;
-  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
-  &::-webkit-progress-bar {
-    background-color: $light;
-    border-radius: 7px;
+.progress--wrapper {
+  align-items: center;
+  column-gap: pxToRem(16);
+  display: flex;
+  .progress--value {
+    color: $gray;
   }
-  &::-webkit-progress-value {
-    background-color: $primary;
-    border-radius: 7px;
-  }
+  progress.progress--bar {
+    border-radius: 7px; 
+    width: 80%;
+    height: 8px;
+    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+    &::-webkit-progress-bar {
+      background-color: $light;
+      border-radius: 7px;
+    }
+    &::-webkit-progress-value {
+      background-color: $primary;
+      border-radius: 7px;
+    }
+  }  
 }
 
 .bug {

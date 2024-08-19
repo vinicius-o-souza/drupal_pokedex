@@ -80,21 +80,8 @@
         font-size: pxToRem(18);
         text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.10);
       }
-      .field--name {
-        &-field-pokeapi-id {
-          color: $gray;
-          font-size: 12px;
-        }
-        &-field-pokemon-types {
-          .field__item {
-            display: inline-block;
-            margin: 0 pxToRem(4);
-          }
-        }
-      }
     }
   }
-
   &.node--view-mode-full {
     @include makeBox();
     background-color: var(--pokemon-color);
@@ -115,6 +102,8 @@
         }
       }
       .field--name-field-pokeapi-id {
+        color: white;
+        font-size: pxToRem(16);
         font-weight: bold;
       }
       .pokemon--image {
@@ -126,9 +115,99 @@
     .node__content {
       @include makeBox();
       background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding-top: 120px;
-      .field--name-field-pokemon-stat {
+      .field {
+        flex: 0 1 100%;
+        margin-bottom: pxToRem(16);
+        max-width: 100%;
+        &--name-field-pokemon-abilities,
+        &--name-field-pokemon-height,
+        &--name-field-pokemon-weight {
+          align-items: center;
+          border-bottom: 1px solid #e1e1e1;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-bottom: 8px;
+          text-align: center;
+          @include media-breakpoint-up(sm) {
+            border-bottom: none;
+            border-right: 1px solid #e1e1e1;
+            flex: 0 1 33.33%;
+            max-width: 33.33%;
+          }
+          .field__icon {
+            margin-right: pxToRem(8);
+            img {
+              height: 32px;
+              width: 32px;
+            }
+          }
+          .field__label {
+            flex: 0 1 100%;
+            font-size: pxToRem(16);
+            font-weight: 300;
+            max-width: 100%;
+            order: 2;
+            &::after {
+              content: none;
+            }
+          }
+          .field__item {
+            font-size: pxToRem(24);
+          }
+        }
+        &--name-field-pokemon-abilities {
+          border-right: none;
+          .field__item {
+            font-size: pxToRem(16);
+            @include media-breakpoint-up(sm) {
+              font-size: pxToRem(24);
+            }
+          }
+        }
+      }
+    }
+  }
+  .field {
+    &.field--name {
+      &-field-pokeapi-id {
+        color: $gray;
+        font-size: pxToRem(12);
+      }
+      &-field-pokemon-types {
+        .field__items {
+          display: flex;
+          justify-content: center;
+        }
+        .field__item {
+          display: inline-block;
+          margin: 0 pxToRem(4);
+        }
+      }
+      &-field-pokemon-stats {
         color: var(--pokemon-color);
+        .field {
+          margin: 0;
+        }
+        .field__label {
+          font-size: pxToRem(32);
+          font-weight: 900;
+          margin-bottom: 8px;
+          text-align: center;
+        }
+        .paragraph--type--pokemon-stats {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          margin: 0;
+          padding: 0;
+          @include media-breakpoint-up(sm) {
+            grid-template-columns: 1fr 3fr;
+          }
+        }
       }
     }
   }

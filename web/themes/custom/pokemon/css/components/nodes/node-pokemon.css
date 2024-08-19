@@ -76,14 +76,6 @@
   font-size: 1.125rem;
   text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
 }
-.node--type-pokemon.node--view-mode-teaser a .field--name-field-pokeapi-id {
-  color: #4B4B4B;
-  font-size: 12px;
-}
-.node--type-pokemon.node--view-mode-teaser a .field--name-field-pokemon-types .field__item {
-  display: inline-block;
-  margin: 0 0.25rem;
-}
 .node--type-pokemon.node--view-mode-full {
   background-color: #F2F2F2;
   border-radius: 0.75rem;
@@ -113,6 +105,8 @@
   }
 }
 .node--type-pokemon.node--view-mode-full header .field--name-field-pokeapi-id {
+  color: white;
+  font-size: 1rem;
   font-weight: bold;
 }
 .node--type-pokemon.node--view-mode-full header .pokemon--image {
@@ -128,8 +122,95 @@
   margin-bottom: 0.5rem;
   padding: 0.75rem;
   background-color: white;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 120px;
 }
-.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-stat {
+.node--type-pokemon.node--view-mode-full .node__content .field {
+  flex: 0 1 100%;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight {
+  align-items: center;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 8px;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight {
+    border-bottom: none;
+    border-right: 1px solid #e1e1e1;
+    flex: 0 1 33.33%;
+    max-width: 33.33%;
+  }
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__icon, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height .field__icon, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight .field__icon {
+  margin-right: 0.5rem;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__icon img, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height .field__icon img, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight .field__icon img {
+  height: 32px;
+  width: 32px;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__label, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height .field__label, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight .field__label {
+  flex: 0 1 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 100%;
+  order: 2;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__label::after, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height .field__label::after, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight .field__label::after {
+  content: none;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__item, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-height .field__item, .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-weight .field__item {
+  font-size: 1.5rem;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities {
+  border-right: none;
+}
+.node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__item {
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .node--type-pokemon.node--view-mode-full .node__content .field--name-field-pokemon-abilities .field__item {
+    font-size: 1.5rem;
+  }
+}
+.node--type-pokemon .field.field--name-field-pokeapi-id {
+  color: #4B4B4B;
+  font-size: 0.75rem;
+}
+.node--type-pokemon .field.field--name-field-pokemon-types .field__items {
+  display: flex;
+  justify-content: center;
+}
+.node--type-pokemon .field.field--name-field-pokemon-types .field__item {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+.node--type-pokemon .field.field--name-field-pokemon-stats {
   color: var(--pokemon-color);
+}
+.node--type-pokemon .field.field--name-field-pokemon-stats .field {
+  margin: 0;
+}
+.node--type-pokemon .field.field--name-field-pokemon-stats .field__label {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.node--type-pokemon .field.field--name-field-pokemon-stats .paragraph--type--pokemon-stats {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 576px) {
+  .node--type-pokemon .field.field--name-field-pokemon-stats .paragraph--type--pokemon-stats {
+    grid-template-columns: 1fr 3fr;
+  }
 }

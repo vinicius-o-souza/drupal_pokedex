@@ -37,59 +37,12 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-    label_display == 'inline' ? 'clearfix',
-  ]
-%}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
+{% extends "@starterkit_theme/field/field.html.twig" %}
 
-{% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items') }}>
-      {% block before_content %}{% endblock %}
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>
-        {% block content %}
-          {{ item.content }}
-        {% endblock %}
-        </div>
-      {% endfor %}
-      {% block after_content %}{% endblock %}
-    </div>
-  {% else %}
-    {{ block('before_content') }}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>
-        {{ block('content')}}
-      </div>
-    {% endfor %}
-    {{ block('after_content') }}
-  {% endif %}
-{% else %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ block('before_content') }}
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-      <div class="field__items">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>
-        {{ block('content') }}
-      </div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-    {{ block('after_content') }}
+{% block before_content %}
+
+  <div class="field__icon">
+    <img src="/{{ directory }}/assets/images/height.svg"/>
   </div>
-{% endif %}
+  
+{% endblock %}
