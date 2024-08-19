@@ -40,12 +40,30 @@ display:
           exclude: false
           alter:
             alter_text: false
+            text: ''
             make_link: false
+            path: ''
             absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
             word_boundary: false
             ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
             strip_tags: false
             trim: false
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
@@ -74,15 +92,17 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-        delta:
-          id: delta
-          table: node__field_pokemon_abilities
-          field: delta
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
           relationship: reverse__node__field_pokemon_abilities
           group_type: count_distinct
           admin_label: ''
-          plugin_id: numeric
-          label: Pokemon
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+          label: Pokémon
           exclude: false
           alter:
             alter_text: false
@@ -112,10 +132,10 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: text-end
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -123,11 +143,23 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
-          format_plural: false
+          format_plural: 0
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
@@ -388,7 +420,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships:
@@ -402,6 +434,7 @@ display:
           entity_type: taxonomy_term
           plugin_id: entity_reverse
           required: false
+      use_ajax: false
       group_by: true
       header:
         area:
@@ -463,11 +496,11 @@ display:
         pager: false
         style: false
         row: false
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
@@ -478,6 +511,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
       path: ability
       menu:
@@ -492,7 +526,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
         - user.permissions

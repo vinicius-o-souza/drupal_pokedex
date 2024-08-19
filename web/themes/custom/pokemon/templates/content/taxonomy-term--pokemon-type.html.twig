@@ -32,7 +32,7 @@
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
   {{ title_prefix }}
   {% if name and not page %}
-    <h2 class="pokemon--type__wrapper">
+    <div class="pokemon--type__wrapper">
       {% set html %}
         <a class="pokemon--type__link" href="{{ url }}">{{ name }}</a>
       {% endset %}
@@ -40,9 +40,9 @@
       {% set class = term.getUntranslated().getName() %}
       {% include 'pokemon_modules:tag' with {
         text: html,
-        class: 'pokemon--tag__large ' ~ class|lower
+        class: class|lower
       } %}
-    </h2>
+    </div>
   {% elseif page %}
     <h1 class="text-center">{{ name }}</h1>
   {% endif %}
