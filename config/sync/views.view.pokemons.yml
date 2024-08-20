@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card
     - core.entity_view_mode.node.teaser
     - node.type.pokemon
     - system.menu.main
@@ -128,6 +129,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: 0
               field_pokemon_types_target_id:
                 plugin_id: bef
                 advanced:
@@ -138,6 +140,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
+                  hide_label: 0
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: true
@@ -147,24 +150,27 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
+                  hide_label: 1
                 max: null
-                min: null
+                min: 0
               field_pokemon_weight_value:
                 plugin_id: bef_number
                 advanced:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
+                  hide_label: 1
                 max: null
-                min: null
+                min: 0
               field_pokemon_experience_value:
                 plugin_id: bef_number
                 advanced:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
+                  hide_label: 1
                 max: null
-                min: null
+                min: 0
       access:
         type: perm
         options:
@@ -414,53 +420,6 @@ display:
               1: {  }
               2: {  }
               3: {  }
-        field_pokemon_experience_value:
-          id: field_pokemon_experience_value
-          table: node__field_pokemon_experience
-          field: field_pokemon_experience_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          operator: between
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_pokemon_experience_value_op
-            label: Experience
-            description: ''
-            use_operator: false
-            operator: field_pokemon_experience_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: experience
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-            min_placeholder: Min
-            max_placeholder: Max
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -474,6 +433,7 @@ display:
       row:
         type: 'entity:node'
         options:
+          relationship: none
           view_mode: teaser
       query:
         type: views_query
@@ -540,7 +500,7 @@ display:
       tags: {  }
   random_pokemon:
     id: random_pokemon
-    display_title: Block
+    display_title: 'Random Pokémon'
     display_plugin: block
     position: 2
     display_options:
@@ -561,8 +521,8 @@ display:
           plugin_id: random
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
+            label: Random
+            field_identifier: random
           exposed: false
       filters:
         status:
@@ -590,13 +550,27 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          row_class: 'col-12 col-md-6 col-lg-3 mb-1 m-auto'
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         sorts: false
         filters: false
         filter_groups: false
         header: false
+      display_description: 'View that list 1 random pokémon'
       header: {  }
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
