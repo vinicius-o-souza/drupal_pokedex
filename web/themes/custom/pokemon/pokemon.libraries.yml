@@ -19,6 +19,7 @@ global:
       css/components/menu.css: {}
       css/components/menu-main.css: {}
       css/components/messages.css: {}
+      css/components/modal.css: {}
       css/components/node.css: {}
       css/components/sidebar.css: {}
       css/components/table.css: {}

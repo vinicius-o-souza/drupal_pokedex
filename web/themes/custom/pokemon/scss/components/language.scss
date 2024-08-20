@@ -63,9 +63,7 @@
     }
   }
   &.site-language-switcher--modal {
-    @include media-breakpoint-up(md) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+    row-gap: pxToRem(16);
     li {
       width: 100%;
       @include media-breakpoint-up(md) {
