@@ -20,7 +20,7 @@
 }
 @media (min-width: 992px) {
   .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper {
-    flex: 0 1 16.6666667%;
+    flex: 0 1 25%;
   }
 }
 .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite {

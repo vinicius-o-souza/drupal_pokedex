@@ -124,6 +124,7 @@
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding-top: 120px;
 }
 .node--type-pokemon.node--view-mode-full .node__content .field {

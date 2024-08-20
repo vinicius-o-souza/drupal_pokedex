@@ -1,0 +1,15 @@
+.modal-dialog {
+  .modal-content {
+    background-color: var(--bs-light);
+    .modal-header {
+      border: none;
+      .modal-title {
+        color: var(--bs-black);
+        font-size: pxToRem(24);
+        font-weight: 300;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

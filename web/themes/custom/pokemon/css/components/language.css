@@ -66,10 +66,8 @@
 .site-language-switcher li a.is-active {
   color: transparent;
 }
-@media (min-width: 768px) {
-  .site-language-switcher.site-language-switcher--modal {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.site-language-switcher.site-language-switcher--modal {
+  row-gap: 1rem;
 }
 .site-language-switcher.site-language-switcher--modal li {
   width: 100%;
