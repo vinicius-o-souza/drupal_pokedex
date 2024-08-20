@@ -7181,16 +7181,16 @@
         },
         {
             "name": "vinicius-o-souza/pokemon_api",
-            "version": "v2.0",
+            "version": "v2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinicius-o-souza/pokemon_api.git",
-                "reference": "b4ee846aa59b098c56609aa5c0f64390e7af1c76"
+                "reference": "2192605824c645c2dca52203b98d430313ed4467"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinicius-o-souza/pokemon_api/zipball/b4ee846aa59b098c56609aa5c0f64390e7af1c76",
-                "reference": "b4ee846aa59b098c56609aa5c0f64390e7af1c76",
+                "url": "https://api.github.com/repos/vinicius-o-souza/pokemon_api/zipball/2192605824c645c2dca52203b98d430313ed4467",
+                "reference": "2192605824c645c2dca52203b98d430313ed4467",
                 "shasum": ""
             },
             "require": {
@@ -7222,9 +7222,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vinicius-o-souza/pokemon_api/issues",
-                "source": "https://github.com/vinicius-o-souza/pokemon_api/tree/v2.0"
+                "source": "https://github.com/vinicius-o-souza/pokemon_api/tree/v2.1"
             },
-            "time": "2024-08-20T21:58:19+00:00"
+            "time": "2024-08-20T23:49:12+00:00"
         },
         {
             "name": "webflo/drupal-finder",
