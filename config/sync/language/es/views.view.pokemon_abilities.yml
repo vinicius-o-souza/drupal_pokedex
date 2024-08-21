@@ -1,0 +1,25 @@
+label: 'Habilidades de Pokémon'
+description: 'La lista de habilidades de Pokémon'
+display:
+  default:
+    display_options:
+      title: 'Habilidades de Pokémon'
+      fields:
+        name:
+          label: Nombre
+        description__value:
+          label: Descripción
+      pager:
+        options:
+          tags:
+            first: '« Primera'
+            last: 'Última »'
+      header:
+        area:
+          content:
+            value: '<h1><span class="Y2IQFc" lang="es">¡L</span>ista de todas las <strong>Habilidades de Pokémon</strong>!</h1>'
+            format: full_html
+  page:
+    display_options:
+      menu:
+        title: Habilidades

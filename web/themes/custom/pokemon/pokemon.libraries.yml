@@ -73,6 +73,11 @@ node_pokemon:
     component:
       css/components/nodes/node-pokemon.css: {}
 
+page_404:
+  css:
+    layout:
+      css/layout/page-404.css: {}
+
 radio:
   css:
     component:

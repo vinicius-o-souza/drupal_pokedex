@@ -1,0 +1,33 @@
+uuid: f7ef3f36-30ca-4030-b3d8-d61c42a9a9cd
+langcode: pt-br
+status: true
+dependencies: {  }
+id: GTM-TFWBD93X.66c613635cd884.73302697
+label: GTM-TFWBD93X
+weight: 0
+tag_container_ids:
+  - GTM-TFWBD93X
+  - ''
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-TFWBD93X:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  sign_up:
+    method: CMS
+  custom: {  }
+  login:
+    method: CMS
+  search: {  }

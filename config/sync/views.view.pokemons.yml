@@ -14,9 +14,9 @@ dependencies:
     - taxonomy
     - user
 id: pokemons
-label: Pokemons
+label: Pokémons
 module: views
-description: 'List of available pokemons'
+description: 'List of available pokémons'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Pokemons
+      title: Pokémons
       fields:
         title:
           id: title
@@ -129,7 +129,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-                  hide_label: 0
+                  hide_label: false
               field_pokemon_types_target_id:
                 plugin_id: bef
                 advanced:
@@ -140,7 +140,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
-                  hide_label: 0
+                  hide_label: false
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: true
@@ -150,7 +150,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
-                  hide_label: 1
+                  hide_label: true
                 max: null
                 min: 0
               field_pokemon_weight_value:
@@ -159,7 +159,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
-                  hide_label: 1
+                  hide_label: true
                 max: null
                 min: 0
               field_pokemon_experience_value:
@@ -168,7 +168,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: true
                   is_secondary: true
-                  hide_label: 1
+                  hide_label: true
                 max: null
                 min: 0
       access:
@@ -188,7 +188,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: '<h4 class="text-center mt-2">Sorry, we didn''t find any Pokemon</h4>'
+          content: '<h4 class="text-center mt-2">Sorry, we didn''t find any Pokémon</h4>'
           tokenize: false
       sorts:
         field_pokemon_order_value:
@@ -456,7 +456,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: '<h1>List of all <strong>Pokemons</strong> for you to choose your favorite!</h1>'
+            value: '<h1>List of all <strong>Pokémons</strong> for you to choose your favorite!</h1>'
             format: full_html
           tokenize: false
       footer: {  }
@@ -482,7 +482,7 @@ display:
       path: pokemons
       menu:
         type: normal
-        title: Pokemons
+        title: Pokémons
         description: ''
         weight: -49
         expanded: false

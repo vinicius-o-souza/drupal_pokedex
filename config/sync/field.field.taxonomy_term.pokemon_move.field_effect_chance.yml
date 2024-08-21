@@ -1,15 +1,15 @@
-uuid: be84d38b-ad96-4f7f-8054-08a9b675faba
+uuid: f5bd1163-ee64-4828-800a-0cc3fe29bde6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_effect_change
+    - field.storage.taxonomy_term.field_effect_chance
     - taxonomy.vocabulary.pokemon_move
-id: taxonomy_term.pokemon_move.field_effect_change
-field_name: field_effect_change
+id: taxonomy_term.pokemon_move.field_effect_chance
+field_name: field_effect_chance
 entity_type: taxonomy_term
 bundle: pokemon_move
-label: 'Effect Change'
+label: 'Effect Chance'
 description: 'The percent value of how likely it is this moves effect will happen.'
 required: true
 translatable: false

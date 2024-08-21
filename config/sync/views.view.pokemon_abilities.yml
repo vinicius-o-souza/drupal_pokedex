@@ -11,9 +11,9 @@ dependencies:
     - text
     - user
 id: pokemon_abilities
-label: 'Pokemon Abilities'
+label: 'Pokémon Abilities'
 module: views
-description: 'The list of Pokemon Moves'
+description: 'The list of Pokémon Abilities'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Pokemon Abilities'
+      title: 'Pokémon Abilities'
       fields:
         name:
           id: name

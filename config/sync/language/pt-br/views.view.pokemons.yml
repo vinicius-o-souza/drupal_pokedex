@@ -18,6 +18,28 @@ display:
         field_pokemon_types_target_id:
           expose:
             label: Tipos
-            description: 'Selecione o tipo do Pokemon'
+            description: 'Selecione o tipo de Pokémon'
           group_info:
             label: Tipos
+        field_pokemon_height_value:
+          expose:
+            label: Altura
+        field_pokemon_weight_value:
+          expose:
+            label: Peso
+          group_info:
+            label: Peso
+            description: ''
+      exposed_form:
+        options:
+          submit_button: Buscar
+          reset_button_label: Limpar
+          bef:
+            general:
+              secondary_label: 'Busca avançada'
+      empty:
+        area_text_custom:
+          content: '<h4 class="text-center mt-2">Desculpe, não encontramos nenhum Pokémon</h4>'
+  random_pokemon:
+    display_options:
+      title: 'Me surpreenda'

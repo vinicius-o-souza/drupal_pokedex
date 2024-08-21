@@ -1,0 +1,38 @@
+label: 'Golpes de Pokémon'
+description: 'Lista dos golpes de pokémon'
+display:
+  default:
+    display_options:
+      title: 'Golpes de Pokémon'
+      fields:
+        name:
+          label: Nome
+        field_type:
+          label: Tipo
+        field_power:
+          label: Poder
+        field_power_points:
+          label: 'Pontos de Poder'
+        field_accuracy:
+          label: Precisão
+        description__value:
+          label: Descrição
+        field_effect_chance:
+          label: 'Chance de Efeito'
+      pager:
+        options:
+          tags:
+            first: '« Primeiro'
+            last: 'Último »'
+      empty:
+        area_text_custom:
+          content: '<h4 class="text-center mt-2">Desculpe, não encontramos nenhum Golpe</h4>'
+      header:
+        area:
+          content:
+            value: '<h1>Lista de todos os <strong>Golpes de Pokémon</strong>!</h1>'
+            format: full_html
+  page:
+    display_options:
+      menu:
+        title: Golpes
