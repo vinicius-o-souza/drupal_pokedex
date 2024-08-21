@@ -7,8 +7,8 @@ display:
       pager:
         options:
           tags:
-            next: ››
-            previous: ‹‹
+            first: '« Primeira'
+            last: 'Última »'
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
@@ -24,8 +24,6 @@ display:
         tid:
           exception:
             title: Tudo
-          title: '{{ arguments.tid }}'
-  feed_1:
-    display_title: Feed
+  feed_1: {  }
   page_1:
     display_title: Página

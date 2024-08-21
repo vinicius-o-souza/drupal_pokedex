@@ -1,0 +1,12 @@
+label: 'Tipos de Pokémon'
+description: 'La lista de los tipos de Pokémon'
+display:
+  page:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<h1>¡Lista de todos los <strong>Tipos de Pokémon</strong>!</h1>'
+            format: full_html
+      menu:
+        title: Tipos

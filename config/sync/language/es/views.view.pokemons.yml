@@ -1,0 +1,37 @@
+description: 'Lista de pokémons disponibles'
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            first: '« Primera'
+            last: 'Última »'
+      filters:
+        field_pokemon_weight_value:
+          group_info:
+            description: ''
+          expose:
+            label: Peso
+        field_pokemon_types_target_id:
+          expose:
+            label: Tipos
+            description: 'Selecciona el tipo de Pokémon'
+        title:
+          expose:
+            placeholder: 'Encuentra tu pokemon...'
+        field_pokemon_height_value:
+          expose:
+            label: Altura
+      header:
+        area:
+          content:
+            value: '<h1>¡Lista de todos los <strong>Pokémons</strong> para que elijas tu favorito!</h1>'
+            format: full_html
+      exposed_form:
+        options:
+          bef:
+            general:
+              secondary_label: 'Opciones avanzadas'
+          submit_button: Buscar
+          reset_button_label: Reiniciar

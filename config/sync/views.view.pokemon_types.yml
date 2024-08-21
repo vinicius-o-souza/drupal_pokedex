@@ -10,9 +10,9 @@ dependencies:
     - taxonomy
     - user
 id: pokemon_types
-label: 'Pokemon Types'
+label: 'Pokémon Types'
 module: views
-description: 'The list of the Pokemon Types'
+description: 'The list of the Pokémon Types'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Pokemon Types'
+      title: 'Pokémon Types'
       fields:
         name:
           id: name
@@ -295,7 +295,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: '<h1>List of all <strong>Types of Pokemon</strong>!</h1>'
+            value: '<h1>List of all <strong>Types of Pokémon</strong>!</h1>'
             format: full_html
           tokenize: false
       rendering_language: '***LANGUAGE_language_interface***'

@@ -1,0 +1,23 @@
+label: 'Habilidades Pokémon'
+description: 'Listagem de todas as habilidades'
+display:
+  default:
+    display_options:
+      title: 'Habilidades Pokémon'
+      pager:
+        options:
+          tags:
+            first: '« Primeiro'
+            last: 'Último »'
+      empty:
+        area_text_custom:
+          content: '<h4 class="text-center mt-2">Desculpe, não encontramos nenhuma habilidade Pokémon</h4>'
+      header:
+        area:
+          content:
+            value: '<h1>Lista de todas as <strong>Habilidades Pokémon</strong>!</h1>'
+            format: full_html
+  page:
+    display_options:
+      menu:
+        title: Habilidades

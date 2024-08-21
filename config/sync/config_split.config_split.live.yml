@@ -1,0 +1,19 @@
+uuid: 13d5f9dc-e184-4683-9913-18409b18e574
+langcode: en
+status: false
+dependencies: {  }
+id: live
+label: Live
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/live
+module:
+  google_tag: 0
+theme: {  }
+complete_list:
+  - google_tag.container.GTM-TFWBD93X.66c613635cd884.73302697
+  - google_tag.settings
+partial_list: {  }

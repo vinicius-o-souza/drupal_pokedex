@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_accuracy
-    - field.storage.taxonomy_term.field_effect_change
+    - field.storage.taxonomy_term.field_effect_chance
     - field.storage.taxonomy_term.field_power
     - field.storage.taxonomy_term.field_power_points
     - field.storage.taxonomy_term.field_type
@@ -15,9 +15,9 @@ dependencies:
     - text
     - user
 id: pokemon_moves
-label: 'Pokemon Moves'
+label: 'Pokémon Moves'
 module: views
-description: 'The list of Pokemon Moves'
+description: 'The list of Pokémon Moves'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -28,7 +28,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Pokemon Moves'
+      title: 'Pokémon Moves'
       fields:
         name:
           id: name
@@ -269,15 +269,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_accuracy:
-          id: field_accuracy
-          table: taxonomy_term__field_accuracy
-          field: field_accuracy
+        field_effect_chance:
+          id: field_effect_chance
+          table: taxonomy_term__field_effect_chance
+          field: field_effect_chance
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Accuracy
+          label: 'Effect Chance'
           exclude: false
           alter:
             alter_text: false
@@ -310,7 +310,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -333,15 +333,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_effect_change:
-          id: field_effect_change
-          table: taxonomy_term__field_effect_change
-          field: field_effect_change
+        field_accuracy:
+          id: field_accuracy
+          table: taxonomy_term__field_accuracy
+          field: field_accuracy
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Effect Change'
+          label: Accuracy
           exclude: false
           alter:
             alter_text: false
@@ -588,8 +588,8 @@ display:
             field_type: field_type
             field_power: field_power
             field_power_points: field_power_points
+            field_effect_chance: field_effect_chance
             field_accuracy: field_accuracy
-            field_effect_change: field_effect_change
             description__value: description__value
           default: name
           info:
@@ -621,14 +621,14 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_accuracy:
+            field_effect_chance:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_effect_change:
+            field_accuracy:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -682,7 +682,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_accuracy'
-        - 'config:field.storage.taxonomy_term.field_effect_change'
+        - 'config:field.storage.taxonomy_term.field_effect_chance'
         - 'config:field.storage.taxonomy_term.field_power'
         - 'config:field.storage.taxonomy_term.field_power_points'
         - 'config:field.storage.taxonomy_term.field_type'
@@ -732,7 +732,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_accuracy'
-        - 'config:field.storage.taxonomy_term.field_effect_change'
+        - 'config:field.storage.taxonomy_term.field_effect_chance'
         - 'config:field.storage.taxonomy_term.field_power'
         - 'config:field.storage.taxonomy_term.field_power_points'
         - 'config:field.storage.taxonomy_term.field_type'
@@ -762,7 +762,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_accuracy'
-        - 'config:field.storage.taxonomy_term.field_effect_change'
+        - 'config:field.storage.taxonomy_term.field_effect_chance'
         - 'config:field.storage.taxonomy_term.field_power'
         - 'config:field.storage.taxonomy_term.field_power_points'
         - 'config:field.storage.taxonomy_term.field_type'

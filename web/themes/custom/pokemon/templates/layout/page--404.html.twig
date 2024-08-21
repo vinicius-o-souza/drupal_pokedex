@@ -45,19 +45,30 @@
 {% extends "page.html.twig" %}
 
 {% block main %}
+  {{ attach_library('pokemon/page_404') }}
+
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="site-page-404 layout-content bg-danger">
+    <div class="page-404 layout-content bg-danger">
       <div class="container">
-        <div class="">
-          <h1>404</h1>
-          <img src="{{ directory ~ '/assets/images/team_rocket.svg' }}" alt="Rocket Team">
+        <div class="row">
+          <div class="page-404--wrapper">
+            <div class="page-404--heading">
+              <h1>404</h1>
+              <div class="page-404--image">
+                <img src="{{ directory ~ '/assets/images/team_rocket.svg' }}" alt="Rocket Team">
+              </div>
+            </div>
+            <div class="page-404--text">
+              <h2>The rocket team</h2>
+              <h2>has won this time.</h2>
+              <a href="{{ url('<front>') }}" class="btn btn-primary">Return</a>
+            </div>
+          </div>
         </div>
-        <p>The rocket team</p>
-        <p>has won this time.</p>
       </div>
-    </div>{# /.layout-content #}
+    </div>
 
   </main>
 {% endblock %}

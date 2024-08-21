@@ -1,0 +1,35 @@
+label: 'Movimientos de Pokémon'
+description: 'La lista de movimientos Pokémon'
+display:
+  default:
+    display_options:
+      title: 'Movimientos de Pokémon'
+      fields:
+        name:
+          label: Nombre
+        field_type:
+          label: Tipo
+        field_power:
+          label: Poder
+        field_power_points:
+          label: 'Puntos de Poder'
+        field_accuracy:
+          label: Exactitud
+        description__value:
+          label: Descripción
+        field_effect_chance:
+          label: 'Posibilidad de Efecto'
+      pager:
+        options:
+          tags:
+            first: '« Primera'
+            last: 'Última »'
+      header:
+        area:
+          content:
+            value: '<h1><span class="Y2IQFc" lang="es">¡</span>Lista de todos los <strong>Movimientos Pokémon</strong>!</h1>'
+            format: full_html
+  page:
+    display_options:
+      menu:
+        title: Movimiento

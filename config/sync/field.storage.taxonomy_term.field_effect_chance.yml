@@ -1,11 +1,11 @@
-uuid: 84692576-9683-4dce-8760-259a3d38a5ec
+uuid: 93f3a201-398f-4625-8b0d-427b2ad075ff
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_effect_change
-field_name: field_effect_change
+id: taxonomy_term.field_effect_chance
+field_name: field_effect_chance
 entity_type: taxonomy_term
 type: integer
 settings:

@@ -208,5 +208,11 @@ if (
   ( ($_ENV['PANTHEON_ENVIRONMENT'] == 'dev') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'test') )
 ) {
   $config['config_split.config_split.development']['status'] = TRUE;
-  $config['google_analytics.settings']['account'] = '';
+}
+
+if (
+  isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+  ( ($_ENV['PANTHEON_ENVIRONMENT'] == 'dev') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'live') )
+) {
+  $config['config_split.config_split.live']['status'] = FALSE;
 }
