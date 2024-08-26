@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80cdae6d4cdabd1b567c3aeea6fe2c8d",
+    "content-hash": "101edec7069ccea0123163e0d28c4392",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7631,16 +7631,16 @@
         },
         {
             "name": "vinicius-o-souza/pokemon_api",
-            "version": "v2.2",
+            "version": "v3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinicius-o-souza/pokemon_api.git",
-                "reference": "40137c9fc6589504f505508c08e7b89aae2841c6"
+                "reference": "bcc0f80d8615b665624c2a65aabe3895014dd030"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinicius-o-souza/pokemon_api/zipball/40137c9fc6589504f505508c08e7b89aae2841c6",
-                "reference": "40137c9fc6589504f505508c08e7b89aae2841c6",
+                "url": "https://api.github.com/repos/vinicius-o-souza/pokemon_api/zipball/bcc0f80d8615b665624c2a65aabe3895014dd030",
+                "reference": "bcc0f80d8615b665624c2a65aabe3895014dd030",
                 "shasum": ""
             },
             "require": {
@@ -7672,9 +7672,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vinicius-o-souza/pokemon_api/issues",
-                "source": "https://github.com/vinicius-o-souza/pokemon_api/tree/v2.2"
+                "source": "https://github.com/vinicius-o-souza/pokemon_api/tree/v3.0"
             },
-            "time": "2024-08-21T21:07:18+00:00"
+            "time": "2024-08-26T23:31:03+00:00"
         },
         {
             "name": "webflo/drupal-finder",
