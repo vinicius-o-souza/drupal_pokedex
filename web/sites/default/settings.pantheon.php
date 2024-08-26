@@ -203,16 +203,14 @@ if (empty($settings['file_scan_ignore_directories'])) {
   ];
 }
 
-if (
-  isset($_ENV['PANTHEON_ENVIRONMENT']) &&
-  ( ($_ENV['PANTHEON_ENVIRONMENT'] == 'dev') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'test') )
-) {
-  $config['config_split.config_split.development']['status'] = TRUE;
-}
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
-if (
-  isset($_ENV['PANTHEON_ENVIRONMENT']) &&
-  ( ($_ENV['PANTHEON_ENVIRONMENT'] == 'dev') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'live') )
-) {
-  $config['config_split.config_split.live']['status'] = FALSE;
+  if (($_ENV['PANTHEON_ENVIRONMENT'] == 'dev') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'test')) {
+    $config['config_split.config_split.development']['status'] = TRUE;
+  }
+  
+  if ($_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
+    $config['config_split.config_split.live']['status'] = TRUE;
+  }
+  
 }
