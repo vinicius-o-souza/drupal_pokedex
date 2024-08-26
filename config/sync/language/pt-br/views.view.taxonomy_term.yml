@@ -1,14 +1,13 @@
-label: 'Termo de taxonomia'
-description: 'Conteúdo pertencente a um certo termo de taxonomia.'
 display:
   default:
-    display_title: Padrão
     display_options:
       pager:
         options:
           tags:
             first: '« Primeira'
             last: 'Última »'
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
@@ -24,6 +23,11 @@ display:
         tid:
           exception:
             title: Tudo
-  feed_1: {  }
+          title: '{{ arguments.tid }}'
+    display_title: Padrão
+  feed_1:
+    display_title: Feed
   page_1:
     display_title: Página
+label: 'Termo de taxonomia'
+description: 'Conteúdo pertencente a um certo termo de taxonomia.'

@@ -1,0 +1,47 @@
+uuid: f83da3b1-c4d1-49d3-9252-3da3063b7fc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+id: GTM-N954773R.66c76db45ad6e6.78683391
+label: GTM-N954773R
+weight: 0
+tag_container_ids:
+  - GTM-N954773R
+  - G-HFN2203624
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-N954773R:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  sign_up:
+    method: CMS
+  custom: {  }
+  login:
+    method: CMS
+  search: {  }
