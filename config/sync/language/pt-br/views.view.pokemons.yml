@@ -29,7 +29,6 @@ display:
             label: Peso
           group_info:
             label: Peso
-            description: ''
       exposed_form:
         options:
           submit_button: Buscar

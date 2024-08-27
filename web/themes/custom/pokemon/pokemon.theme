@@ -1,6 +1,7 @@
 <?php declare(strict_types = 1);
 
 use Drupal\block_content\Entity\BlockContent;
+use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
 
 /**
@@ -27,9 +28,35 @@ function pokemon_preprocess_page(array &$variables): void {
  */
 function pokemon_preprocess_node(array &$variables): void {
   $node = $variables['node'];
+  $viewMode = $variables['view_mode'];
 
   if ($node instanceof Node) {
     if ($node->bundle() === 'pokemon') {
+      if ($viewMode === 'full') {
+        $pokeApiId = $node->get('field_pokeapi_id')->value;
+        $storage = \Drupal::entityTypeManager()->getStorage('node');
+        $previousPokemon = $storage->loadByProperties(['field_pokeapi_id' => $pokeApiId - 1]);
+        $nextPokemon = $storage->loadByProperties(['field_pokeapi_id' => $pokeApiId + 1]);
+        $previousPokemon = reset($previousPokemon);
+        if (!empty($previousPokemon)) {
+          $title = '#' . $previousPokemon->get('field_pokeapi_id')->value . ' - ' . $previousPokemon->get('title')->value;
+          $variables['previous_pokemon'] = [
+            '#type' => 'link',
+            '#title' => Markup::create('<i class="bi bi-chevron-left"></i><span>' . $title . '</span>'),
+            '#url' => $previousPokemon->toUrl(),
+          ]; 
+        }
+        $nextPokemon = reset($nextPokemon);
+        if (!empty($nextPokemon)) {
+          $title = '#' . $nextPokemon->get('field_pokeapi_id')->value . ' - ' . $nextPokemon->get('title')->value;
+          $variables['next_pokemon'] = [
+            '#type' => 'link',
+            '#title' => Markup::create('<span>' . $title . '</span><i class="bi bi-chevron-right"></i>'),
+            '#url' => $nextPokemon->toUrl(),
+          ];    
+        }
+      }
+      
       $pokemonTypes = $node->get('field_pokemon_types')->referencedEntities();
       if (!empty($pokemonTypes)) {
         $pokemonType = $pokemonTypes[0];

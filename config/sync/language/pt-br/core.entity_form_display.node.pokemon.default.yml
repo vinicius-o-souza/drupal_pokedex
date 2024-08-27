@@ -1,4 +1,8 @@
 content:
+  field_pokemon_moves:
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
   field_pokemon_stats:
     settings:
       title: Parágrafo

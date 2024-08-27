@@ -16,22 +16,32 @@
             padding: pxToRem(24);
           }
           .details-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            display: grid;
             @include media-breakpoint-up(md) {
-              column-gap: pxToRem(16);
-              flex-direction: row;
-            }
-            .form-wrapper {
-              @include media-breakpoint-up(lg) {
-                flex: 0 1 25%;
+              align-items: center;
+              gap: pxToRem(32);
+              grid-template-areas: 
+                'height weight mythical legendary'
+                'type type type type'
+              ;
+              .form-item-mythical {
+                grid-area: mythical;
               }
+              .form-item-legendary {
+                grid-area: legendary;
+              }
+              .form-wrapper[data-drupal-selector="edit-height-wrapper"] {
+                grid-area: height;
+              }
+              .form-wrapper[data-drupal-selector="edit-weight-wrapper"] {
+                grid-area: weight;
+              }
+              .form-wrapper[data-drupal-selector="edit-type"] {
+                grid-area: type;
+              }
+            }
+            .form-item {
               &.form-composite {
-                flex: 0 1 25%;
-                @include media-breakpoint-up(lg) {
-                  flex: 0 1 50%;
-                }
                 .form-radios,
                 .form-checkboxes {
                   @include media-breakpoint-up(lg) {

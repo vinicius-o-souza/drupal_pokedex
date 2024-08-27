@@ -76,25 +76,48 @@
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     pokemon_type,
-    'mt-2 mb-2'
+    'pt-2 pb-2'
   ]
 %}
 
 {{ attach_library('pokemon/node_pokemon') }}
 <article{{ attributes.addClass(classes) }}>
+  <div class="node__main-content {{ pokemon_type }}">
+    <header class="node__main-content--header">
+      {{ title_prefix }}
+      {% if label %}
+        <h1{{ title_attributes.addClass('node__title') }}>{{ label }}</h1>
+        {{ content.field_pokeapi_id }}
+        {% include '@pokemon/includes/pokemon--image.html.twig' with {
+          label: label,
+          pokeapi_id: node.field_pokeapi_id.value,
+        }%}
+        {% if previous_pokemon or next_pokemon %}
+          <div class="node__pokemon-links">
+            {% if previous_pokemon %}
+              <div class="node__pokemon-links--previous">
+                {{ previous_pokemon }}
+              </div>
+            {% endif %}
+            {% if next_pokemon %}
+              <div class="node__pokemon-links--next">
+                {{ next_pokemon }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+      {{ title_suffix }}
+    </header>
 
-  <header>
-    {{ title_prefix }}
-    {% if label %}
-      <h1{{ title_attributes.addClass('node__title') }}>{{ label }}</h1>
-      {{ content.field_pokeapi_id }}
-      {% include '@pokemon/includes/pokemon--image.html.twig' with {
-        label: label,
-        pokeapi_id: node.field_pokeapi_id.value,
-      }%}
-    {% endif %}
-    {{ title_suffix }}
-  </header>
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content|without('field_pokeapi_id', 'group_bottom_content', 'group_side_content') }}
+    </div>
+  </div>
+
+  <div class="node__bottom-content">
+    {{ content.group_bottom_content }}
+  </div>
 
   {% if display_submitted %}
     <footer class="node__meta">
@@ -105,9 +128,5 @@
       </div>
     </footer>
   {% endif %}
-
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_pokeapi_id') }}
-  </div>
 
 </article>

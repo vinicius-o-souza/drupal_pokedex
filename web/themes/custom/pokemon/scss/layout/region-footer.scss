@@ -11,6 +11,9 @@
   .block {
     padding: pxToRem(8) 0;
     text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
     &:nth-child(even) {
       @include media-breakpoint-up(md) {
         justify-self: end;

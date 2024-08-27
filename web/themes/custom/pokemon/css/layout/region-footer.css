@@ -13,6 +13,11 @@
   text-align: center;
 }
 @media (min-width: 768px) {
+  .region-footer .block {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
   .region-footer .block:nth-child(even) {
     justify-self: end;
   }
