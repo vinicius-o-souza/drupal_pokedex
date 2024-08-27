@@ -8,40 +8,41 @@
   padding: 1.5rem;
 }
 .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  display: grid;
 }
 @media (min-width: 768px) {
   .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper {
-    column-gap: 1rem;
-    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    grid-template-areas: "height weight mythical legendary" "type type type type";
+  }
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-item-mythical {
+    grid-area: mythical;
+  }
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-item-legendary {
+    grid-area: legendary;
+  }
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper[data-drupal-selector=edit-height-wrapper] {
+    grid-area: height;
+  }
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper[data-drupal-selector=edit-weight-wrapper] {
+    grid-area: weight;
+  }
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper[data-drupal-selector=edit-type] {
+    grid-area: type;
   }
 }
 @media (min-width: 992px) {
-  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper {
-    flex: 0 1 25%;
-  }
-}
-.view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite {
-  flex: 0 1 25%;
-}
-@media (min-width: 992px) {
-  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite {
-    flex: 0 1 50%;
-  }
-}
-@media (min-width: 992px) {
-  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-radios,
-  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-checkboxes {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-item.form-composite .form-radios,
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-item.form-composite .form-checkboxes {
     display: flex;
     max-width: 100%;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 992px) {
-  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-radios .form-item,
-  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-wrapper.form-composite .form-checkboxes .form-item {
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-item.form-composite .form-radios .form-item,
+  .view-pokemons .view-filters .views-exposed-form .form-type-details .bef--secondary .details-wrapper .form-item.form-composite .form-checkboxes .form-item {
     flex: 0 1 25%;
     margin-right: 0;
   }

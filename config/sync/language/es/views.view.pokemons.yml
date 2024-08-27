@@ -9,8 +9,6 @@ display:
             last: 'Última »'
       filters:
         field_pokemon_weight_value:
-          group_info:
-            description: ''
           expose:
             label: Peso
         field_pokemon_types_target_id:

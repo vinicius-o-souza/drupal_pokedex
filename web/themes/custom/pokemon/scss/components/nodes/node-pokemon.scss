@@ -83,89 +83,157 @@
     }
   }
   &.node--view-mode-full {
-    @include makeBox();
-    background-color: var(--pokemon-color);
-    margin: 0 auto;
-    max-width: 600px;
-    header {
-      background-image: url(../../../assets/images/pokeball.svg);
-      background-position: right top;
-      background-repeat: no-repeat;
-      color: #FFFFFF;
-      text-align: center;
-      h1 {
-        font-size: pxToRem(52);
-        color: #FFFFFF;
-        text-shadow: 3px 2px 0px rgba(0,0,0,0.51);
-        @include media-breakpoint-up(md) {
-          font-size: pxToRem(72);
+    .node__pokemon-links {
+      &--previous, &--next {
+        position: absolute;
+        top: pxToRem(200);
+        @include media-breakpoint-up(xxl) {
+          font-size: pxToRem(32);
+        }
+        a {
+          &:hover {
+            .bi {
+              color: $gray;
+            }
+          }
+          span {
+            display: none;
+          }
+          .bi {
+            color: var(--bs-white);
+            font-size: pxToRem(32);
+            position: absolute;
+            top: 0;
+            @include media-breakpoint-up(lg) {
+              font-size: pxToRem(64);
+            }
+          }
         }
       }
-      .field--name-field-pokeapi-id {
-        color: white;
-        font-size: pxToRem(16);
-        font-weight: bold;
+      &--previous {
+        left: 0;
+        a {
+          @include media-breakpoint-up(xxl) {
+            padding-left: pxToRem(64);
+          }
+        }
+        .bi {
+          left: 0;
+        }
       }
-      .pokemon--image {
-        margin-bottom: -80px;
-        max-width: 400px;
-        width: 100%;
+      &--next {
+        right: 0;
+        a {
+          @include media-breakpoint-up(xxl) {
+            padding-right: pxToRem(64);
+          }
+        }
+        .bi {
+          right: 0;
+        }
       }
     }
-    .node__content {
+    .node__main-content {
       @include makeBox();
-      background-color: white;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding-top: 120px;
-      .field {
-        flex: 0 1 100%;
-        margin-bottom: pxToRem(16);
-        max-width: 100%;
-        &--name-field-pokemon-abilities,
-        &--name-field-pokemon-height,
-        &--name-field-pokemon-weight {
-          align-items: center;
-          border-bottom: 1px solid #e1e1e1;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          padding-bottom: 8px;
-          text-align: center;
-          @include media-breakpoint-up(sm) {
-            border-bottom: none;
-            border-right: 1px solid #e1e1e1;
-            flex: 0 1 33.33%;
-            max-width: 33.33%;
-          }
-          .field__icon {
-            margin-right: pxToRem(8);
-            img {
-              height: 32px;
-              width: 32px;
-            }
-          }
-          .field__label {
-            flex: 0 1 100%;
-            font-size: pxToRem(16);
-            font-weight: 300;
-            max-width: 100%;
-            order: 2;
-            &::after {
-              content: none;
-            }
-          }
-          .field__item {
-            font-size: pxToRem(24);
+      background-color: var(--pokemon-color);
+      margin: 0 auto;
+      max-width: 600px;
+      position: relative;
+      header {
+        background-image: url(../../../assets/images/pokeball.svg);
+        background-position: right top;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        h1 {
+          font-size: pxToRem(52);
+          color: #FFFFFF;
+          text-shadow: 3px 2px 0px rgba(0,0,0,0.51);
+          @include media-breakpoint-up(md) {
+            font-size: pxToRem(72);
           }
         }
-        &--name-field-pokemon-abilities {
-          border-right: none;
-          .field__item {
-            font-size: pxToRem(16);
-            @include media-breakpoint-up(sm) {
-              font-size: pxToRem(24);
+        .field--name-field-pokeapi-id {
+          color: white;
+          font-size: pxToRem(16);
+          font-weight: bold;
+        }
+        .pokemon--image {
+          margin-bottom: -80px;
+          max-width: 400px;
+          width: 100%;
+        }
+      }
+      .node__content {
+        @include makeBox();
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 120px;
+        .field {
+          flex: 0 1 100%;
+          margin-bottom: pxToRem(16);
+          max-width: 100%;
+          &.field--name {
+            &-field-pokemon-abilities,
+            &-field-pokemon-height,
+            &-field-pokemon-weight {
+              align-items: center;
+              border-bottom: 1px solid #e1e1e1;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              padding-top: 8px;
+              padding-bottom: 8px;
+              text-align: center;
+              @include media-breakpoint-up(sm) {
+                border-bottom: none;
+                border-right: 1px solid #e1e1e1;
+                flex: 0 1 33.33%;
+                max-width: 33.33%;
+              }
+              .field__icon {
+                margin-right: pxToRem(8);
+                img {
+                  height: 32px;
+                  width: 32px;
+                }
+              }
+              .field__label {
+                flex: 0 1 100%;
+                font-size: pxToRem(16);
+                font-weight: 300;
+                max-width: 100%;
+                order: 2;
+                &::after {
+                  content: none;
+                }
+              }
+              .field__item {
+                font-size: pxToRem(24);
+              }
+            }
+            &-field-pokemon-mythical,
+            &-field-pokemon-legendary {
+              margin-top: -30px;
+              @include media-breakpoint-up(lg) {
+                left: 50%;
+                margin: 0;
+                position: absolute;
+                top: 150px;
+                transform: translateX(-50%);
+              }
+            }
+            &-field-pokemon-abilities {
+              border-right: none;
+              .field__item {
+                font-size: pxToRem(16);
+                @include media-breakpoint-up(sm) {
+                  font-size: pxToRem(24);
+                }
+              }
             }
           }
         }
@@ -206,6 +274,108 @@
           padding: 0;
           @include media-breakpoint-up(sm) {
             grid-template-columns: 1fr 3fr;
+          }
+        }
+      }
+      &-field-pokemon-generation,
+      &-field-pokemon-mythical,
+      &-field-pokemon-legendary {
+        text-align: center;
+      }
+      &-field-pokemon-mythical,
+      &-field-pokemon-legendary {
+        margin-top: -30px;
+        .badge {
+          background-color: $light;
+          color: $gray;
+          font-size: pxToRem(16);
+          padding-left: pxToRem(48);
+        }
+        .field__item {
+          .badge {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 10px center;
+          }
+        }
+      }
+      &-field-pokemon-legendary {
+        .field__item {
+          .badge {
+            background-image: url(../../../assets/images/legendary.png);
+          }
+        }
+      }
+      &-field-pokemon-mythical {
+        .field__item {
+          .badge {
+            background-image: url(../../../assets/images/mythical.png);
+          }
+        }
+      }
+      &-field-pokemon-evolutions {
+        padding: pxToRem(16) 0;
+        @include media-breakpoint-up(md) {
+          padding: pxToRem(32) 0;
+        }
+        .field__label {
+          font-size: pxToRem(32);
+          font-weight: normal;
+          margin-bottom: pxToRem(16);
+          text-align: center;
+        }
+        > .field__items {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: pxToRem(16);
+          @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            gap: pxToRem(24);
+            justify-content: center;
+          }
+          > .field__item {
+            padding-bottom: pxToRem(48);
+            position: relative;
+            &::before {
+              color: $gray;
+              content: "\f124";
+              display: block;
+              font-family: bootstrap-icons !important;
+              font-size: pxToRem(48);
+              font-weight: bold;
+              left: 50%;
+              position: absolute;
+              transform: translateX(-50%);
+              width: 32px;
+              bottom: -20px;
+              @include media-breakpoint-up(lg) {
+                bottom: 50%;
+                height: 32px;
+                left: auto;
+                right: -10px;
+                rotate: 270deg;
+                top: auto;
+                transform: none;
+              }
+            }
+            &:last-child {
+              &::before {
+                content: none;
+              }
+            }
+          }
+          .node--view-mode-teaser {
+            margin: 0 10px;
+            a {
+              box-shadow: 0 2px 2px 0px $gray;
+              @include media-breakpoint-up(lg) {
+                padding: pxToRem(32);
+              }
+              @include media-breakpoint-up(xl) {
+                padding: pxToRem(32) pxToRem(48);
+              }
+            }
           }
         }
       }

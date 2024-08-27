@@ -20,6 +20,9 @@ settings:
     -
       value: machine
       label: Machine
+    -
+      value: move_tutor
+      label: 'Move Tutor'
   allowed_values_function: ''
 module: options
 locked: false
