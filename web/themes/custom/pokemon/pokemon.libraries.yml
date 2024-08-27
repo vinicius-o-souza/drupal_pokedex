@@ -1,7 +1,5 @@
 # Main theme library.
 global:
-  js:
-    js/pokemon.js: {}
   css:
     base:
       css/base/elements.css: {}
@@ -30,6 +28,10 @@ global:
       css/layout/region-header.css: {}
     theme:
       css/theme/print.css: { media: print }
+  js:
+    js/pokemon.js: {}
+  dependencies:
+    - core/drupal
 
 bootstrap:
   js:
