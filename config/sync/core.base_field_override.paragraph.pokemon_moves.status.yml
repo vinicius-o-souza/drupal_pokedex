@@ -1,0 +1,22 @@
+uuid: 5a1aa9ea-b8af-4c08-8700-25978e82e0b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.pokemon_moves
+id: paragraph.pokemon_moves.status
+field_name: status
+entity_type: paragraph
+bundle: pokemon_moves
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

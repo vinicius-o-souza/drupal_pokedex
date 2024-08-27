@@ -1,0 +1,18 @@
+uuid: 398a52e3-b927-479d-831a-86919a42398b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.pokemon_stats
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.pokemon_stats
+target_entity_type_id: paragraph
+target_bundle: pokemon_stats
+default_langcode: site_default
+language_alterable: false
